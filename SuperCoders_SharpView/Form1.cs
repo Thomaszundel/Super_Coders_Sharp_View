@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SuperCoders_SharpView
 {
-    public partial class Form1 : Form
+    public partial class FormSharpView : Form
     {
-        public Form1()
+        public FormSharpView()
         {
             InitializeComponent();
         }
