@@ -9,3 +9,14 @@ C:\Users\jenni\Source\Repos\Super_Coders_Sharp_View_Location\SuperCoders_SharpVi
 C:\Users\jenni\Source\Repos\Super_Coders_Sharp_View_Location\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
 C:\Users\jenni\Source\Repos\Super_Coders_Sharp_View_Location\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
 C:\Users\jenni\Source\Repos\Super_Coders_Sharp_View_Location\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.SplashScreen.resources
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe.config
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.pdb
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csprojAssemblyReference.cache
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.FormSharpView.resources
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.Properties.Resources.resources
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.SplashScreen.resources
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.GenerateResource.cache
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
+C:\Users\alexa\source\GitHubRepos\New folder\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
