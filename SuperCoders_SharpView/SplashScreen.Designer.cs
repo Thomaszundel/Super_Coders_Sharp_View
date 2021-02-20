@@ -43,6 +43,7 @@ namespace SuperCoders_SharpView
             this.pbSplash.Size = new System.Drawing.Size(500, 281);
             this.pbSplash.TabIndex = 0;
             this.pbSplash.TabStop = false;
+            this.pbSplash.Click += new System.EventHandler(this.pbSplash_Click);
             // 
             // SplashTimer
             // 

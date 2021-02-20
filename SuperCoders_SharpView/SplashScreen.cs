@@ -22,5 +22,10 @@ namespace SuperCoders_SharpView
             this.Close();
             SplashTimer.Enabled = false;
         }
+
+        private void pbSplash_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
