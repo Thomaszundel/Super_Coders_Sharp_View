@@ -53,8 +53,8 @@ namespace SuperCoders_SharpView
             this.mnuOptions});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(804, 24);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(1072, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -65,43 +65,43 @@ namespace SuperCoders_SharpView
             this.mnuFileClose,
             this.mnuFileExit});
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(37, 20);
+            this.mnuFile.Size = new System.Drawing.Size(46, 24);
             this.mnuFile.Text = "File";
             // 
             // mnuFileOpen
             // 
             this.mnuFileOpen.Name = "mnuFileOpen";
-            this.mnuFileOpen.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileOpen.Size = new System.Drawing.Size(128, 26);
             this.mnuFileOpen.Text = "Open";
             this.mnuFileOpen.Click += new System.EventHandler(this.mnuFileOpen_Click);
             // 
             // mnuFileClose
             // 
             this.mnuFileClose.Name = "mnuFileClose";
-            this.mnuFileClose.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileClose.Size = new System.Drawing.Size(128, 26);
             this.mnuFileClose.Text = "Close";
             // 
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileExit.Size = new System.Drawing.Size(128, 26);
             this.mnuFileExit.Text = "Exit ";
             this.mnuFileExit.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // mnuOptions
             // 
             this.mnuOptions.Name = "mnuOptions";
-            this.mnuOptions.Size = new System.Drawing.Size(61, 20);
+            this.mnuOptions.Size = new System.Drawing.Size(75, 24);
             this.mnuOptions.Text = "Options";
             // 
             // PicBoxMain
             // 
             this.PicBoxMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PicBoxMain.Location = new System.Drawing.Point(0, 24);
-            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(2);
+            this.PicBoxMain.Location = new System.Drawing.Point(0, 28);
+            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PicBoxMain.Name = "PicBoxMain";
-            this.PicBoxMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
-            this.PicBoxMain.Size = new System.Drawing.Size(804, 537);
+            this.PicBoxMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 62);
+            this.PicBoxMain.Size = new System.Drawing.Size(1072, 662);
             this.PicBoxMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicBoxMain.TabIndex = 6;
             this.PicBoxMain.TabStop = false;
@@ -110,9 +110,10 @@ namespace SuperCoders_SharpView
             // 
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(503, 536);
+            this.lblName.Location = new System.Drawing.Point(671, 660);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(46, 17);
             this.lblName.TabIndex = 7;
             this.lblName.Text = "label1";
             // 
@@ -120,18 +121,20 @@ namespace SuperCoders_SharpView
             // 
             this.lblImgNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblImgNumber.AutoSize = true;
-            this.lblImgNumber.Location = new System.Drawing.Point(153, 536);
+            this.lblImgNumber.Location = new System.Drawing.Point(204, 660);
+            this.lblImgNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImgNumber.Name = "lblImgNumber";
-            this.lblImgNumber.Size = new System.Drawing.Size(35, 13);
+            this.lblImgNumber.Size = new System.Drawing.Size(46, 17);
             this.lblImgNumber.TabIndex = 8;
             this.lblImgNumber.Text = "label2";
             // 
             // btnNext
             // 
             this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnNext.Location = new System.Drawing.Point(376, 531);
+            this.btnNext.Location = new System.Drawing.Point(501, 654);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.Size = new System.Drawing.Size(100, 28);
             this.btnNext.TabIndex = 9;
             this.btnNext.Text = "button1";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -139,9 +142,10 @@ namespace SuperCoders_SharpView
             // btnLast
             // 
             this.btnLast.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnLast.Location = new System.Drawing.Point(252, 531);
+            this.btnLast.Location = new System.Drawing.Point(336, 654);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(75, 23);
+            this.btnLast.Size = new System.Drawing.Size(100, 28);
             this.btnLast.TabIndex = 10;
             this.btnLast.Text = "button2";
             this.btnLast.UseVisualStyleBackColor = true;
@@ -155,16 +159,17 @@ namespace SuperCoders_SharpView
             // 
             // FormSharpView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 561);
+            this.ClientSize = new System.Drawing.Size(1072, 690);
             this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblImgNumber);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.PicBoxMain);
             this.Controls.Add(this.menuStrip2);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1061, 728);
             this.Name = "FormSharpView";
             this.Text = "Super Coder Sharp View";
             this.menuStrip2.ResumeLayout(false);
