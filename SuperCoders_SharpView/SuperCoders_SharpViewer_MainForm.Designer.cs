@@ -29,168 +29,170 @@ namespace SuperCoders_SharpView
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuOptions = new System.Windows.Forms.ToolStripMenuItem();
+            this.PicBoxMain = new System.Windows.Forms.PictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblImgNumber = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnLast = new System.Windows.Forms.Button();
-            this.lblDisplayNumImage = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ofdMain = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBoxMain)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(804, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // menuStrip2
             // 
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.optionsToolStripMenuItem});
+            this.mnuFile,
+            this.mnuOptions});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(804, 24);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(1072, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // fileToolStripMenuItem
+            // mnuFile
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.closeToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFileOpen,
+            this.mnuFileClose,
+            this.mnuFileExit});
+            this.mnuFile.Name = "mnuFile";
+            this.mnuFile.Size = new System.Drawing.Size(46, 24);
+            this.mnuFile.Text = "File";
             // 
-            // openToolStripMenuItem
+            // mnuFileOpen
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.openToolStripMenuItem.Text = "Open";
+            this.mnuFileOpen.Name = "mnuFileOpen";
+            this.mnuFileOpen.Size = new System.Drawing.Size(128, 26);
+            this.mnuFileOpen.Text = "Open";
+            this.mnuFileOpen.Click += new System.EventHandler(this.mnuFileOpen_Click);
             // 
-            // closeToolStripMenuItem
+            // mnuFileClose
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.closeToolStripMenuItem.Text = "Close";
+            this.mnuFileClose.Name = "mnuFileClose";
+            this.mnuFileClose.Size = new System.Drawing.Size(128, 26);
+            this.mnuFileClose.Text = "Close";
             // 
-            // exitToolStripMenuItem
+            // mnuFileExit
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.exitToolStripMenuItem.Text = "Exit ";
+            this.mnuFileExit.Name = "mnuFileExit";
+            this.mnuFileExit.Size = new System.Drawing.Size(128, 26);
+            this.mnuFileExit.Text = "Exit ";
+            this.mnuFileExit.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // optionsToolStripMenuItem
+            // mnuOptions
             // 
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.optionsToolStripMenuItem.Text = "Options";
-
+            this.mnuOptions.Name = "mnuOptions";
+            this.mnuOptions.Size = new System.Drawing.Size(75, 24);
+            this.mnuOptions.Text = "Options";
+            // 
+            // PicBoxMain
+            // 
+            this.PicBoxMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicBoxMain.Location = new System.Drawing.Point(0, 28);
+            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PicBoxMain.Name = "PicBoxMain";
+            this.PicBoxMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 62);
+            this.PicBoxMain.Size = new System.Drawing.Size(1072, 662);
+            this.PicBoxMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBoxMain.TabIndex = 6;
+            this.PicBoxMain.TabStop = false;
+            // 
+            // lblName
+            // 
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(671, 660);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(46, 17);
+            this.lblName.TabIndex = 7;
+            this.lblName.Text = "label1";
+            // 
+            // lblImgNumber
+            // 
+            this.lblImgNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblImgNumber.AutoSize = true;
+            this.lblImgNumber.Location = new System.Drawing.Point(204, 660);
+            this.lblImgNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblImgNumber.Name = "lblImgNumber";
+            this.lblImgNumber.Size = new System.Drawing.Size(46, 17);
+            this.lblImgNumber.TabIndex = 8;
+            this.lblImgNumber.Text = "label2";
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(391, 336);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnNext.Location = new System.Drawing.Point(501, 654);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(56, 19);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = "Next";
+            this.btnNext.Size = new System.Drawing.Size(100, 28);
+            this.btnNext.TabIndex = 9;
+            this.btnNext.Text = "button1";
             this.btnNext.UseVisualStyleBackColor = true;
             // 
             // btnLast
             // 
-            this.btnLast.Location = new System.Drawing.Point(310, 336);
-            this.btnLast.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLast.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLast.Location = new System.Drawing.Point(336, 654);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(56, 19);
-            this.btnLast.TabIndex = 3;
-            this.btnLast.Text = "Last";
+            this.btnLast.Size = new System.Drawing.Size(100, 28);
+            this.btnLast.TabIndex = 10;
+            this.btnLast.Text = "button2";
             this.btnLast.UseVisualStyleBackColor = true;
             // 
-            // lblDisplayNumImage
+            // ofdMain
             // 
-            this.lblDisplayNumImage.AutoSize = true;
-            this.lblDisplayNumImage.Location = new System.Drawing.Point(160, 340);
-            this.lblDisplayNumImage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDisplayNumImage.Name = "lblDisplayNumImage";
-            this.lblDisplayNumImage.Size = new System.Drawing.Size(35, 13);
-            this.lblDisplayNumImage.TabIndex = 4;
-            this.lblDisplayNumImage.Text = "label1";
-            this.lblDisplayNumImage.Visible = false;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(481, 340);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
-            this.lblName.TabIndex = 5;
-            this.lblName.Text = "label1";
-            this.lblName.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(804, 306);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.ofdMain.FileName = "openFileDialog1";
+            this.ofdMain.InitialDirectory = "cmd \"D:\\Winter 2021\\IT111\\Group Project\\Sharp_View\\SuperCoders_SharpView\\bin\\Debu" +
+    "g\\Desktop images";
+            this.ofdMain.RestoreDirectory = true;
             // 
             // FormSharpView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 360);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.lblDisplayNumImage);
+            this.ClientSize = new System.Drawing.Size(1072, 690);
             this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.lblImgNumber);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.PicBoxMain);
             this.Controls.Add(this.menuStrip2);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1061, 728);
             this.Name = "FormSharpView";
             this.Text = "Super Coder Sharp View";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBoxMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileOpen;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileClose;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileExit;
+        private System.Windows.Forms.ToolStripMenuItem mnuOptions;
+        private System.Windows.Forms.PictureBox PicBoxMain;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblImgNumber;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnLast;
-        private System.Windows.Forms.Label lblDisplayNumImage;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog ofdMain;
     }
 }
 
