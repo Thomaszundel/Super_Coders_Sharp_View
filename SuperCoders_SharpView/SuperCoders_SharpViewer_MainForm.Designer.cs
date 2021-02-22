@@ -48,9 +48,10 @@ namespace SuperCoders_SharpView
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1072, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(804, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,7 +63,8 @@ namespace SuperCoders_SharpView
             this.optionsToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1072, 28);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(804, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -73,47 +75,50 @@ namespace SuperCoders_SharpView
             this.closeToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.closeToolStripMenuItem.Text = "Close";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit ";
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
+
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(521, 413);
+            this.btnNext.Location = new System.Drawing.Point(391, 336);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.Size = new System.Drawing.Size(56, 19);
             this.btnNext.TabIndex = 2;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
             // 
             // btnLast
             // 
-            this.btnLast.Location = new System.Drawing.Point(414, 413);
+            this.btnLast.Location = new System.Drawing.Point(310, 336);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(75, 23);
+            this.btnLast.Size = new System.Drawing.Size(56, 19);
             this.btnLast.TabIndex = 3;
             this.btnLast.Text = "Last";
             this.btnLast.UseVisualStyleBackColor = true;
@@ -121,9 +126,10 @@ namespace SuperCoders_SharpView
             // lblDisplayNumImage
             // 
             this.lblDisplayNumImage.AutoSize = true;
-            this.lblDisplayNumImage.Location = new System.Drawing.Point(213, 418);
+            this.lblDisplayNumImage.Location = new System.Drawing.Point(160, 340);
+            this.lblDisplayNumImage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDisplayNumImage.Name = "lblDisplayNumImage";
-            this.lblDisplayNumImage.Size = new System.Drawing.Size(46, 17);
+            this.lblDisplayNumImage.Size = new System.Drawing.Size(35, 13);
             this.lblDisplayNumImage.TabIndex = 4;
             this.lblDisplayNumImage.Text = "label1";
             this.lblDisplayNumImage.Visible = false;
@@ -131,26 +137,28 @@ namespace SuperCoders_SharpView
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(641, 418);
+            this.lblName.Location = new System.Drawing.Point(481, 340);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(46, 17);
+            this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "label1";
             this.lblName.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1072, 376);
+            this.pictureBox1.Size = new System.Drawing.Size(804, 306);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // FormSharpView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 443);
+            this.ClientSize = new System.Drawing.Size(804, 360);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblDisplayNumImage);
@@ -159,7 +167,6 @@ namespace SuperCoders_SharpView
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSharpView";
             this.Text = "Super Coder Sharp View";
             this.menuStrip2.ResumeLayout(false);
