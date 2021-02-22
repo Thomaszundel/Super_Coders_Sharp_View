@@ -17,6 +17,26 @@ namespace SuperCoders_SharpView
             InitializeComponent();
         }
 
-       
+        private void mnuFileOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "jpg (*.jpg)|*.jpg|bmp (*.bmp)|*.bmp|png (*.png)|*.png";
+
+
+
+
+
+            if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
+            {
+                // change this in properties
+                //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                PicBoxMain.Image = Image.FromFile(ofd.FileName);
+            }
+        }
+
+        private void mnuFileExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -42,3 +42,14 @@ C:\Users\Keri Gabriel\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView
 C:\Users\Keri Gabriel\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
 C:\Users\Keri Gabriel\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
 C:\Users\Keri Gabriel\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe.config
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.pdb
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csprojAssemblyReference.cache
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.FormSharpView.resources
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.Properties.Resources.resources
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.SplashScreen.resources
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.GenerateResource.cache
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
+D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
