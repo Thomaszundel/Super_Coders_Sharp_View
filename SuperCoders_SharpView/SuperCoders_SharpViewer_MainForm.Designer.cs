@@ -29,6 +29,8 @@ namespace SuperCoders_SharpView
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSharpView));
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +43,7 @@ namespace SuperCoders_SharpView
             this.btnNext = new System.Windows.Forms.Button();
             this.btnLast = new System.Windows.Forms.Button();
             this.ofdMain = new System.Windows.Forms.OpenFileDialog();
+            this.timerCheckDarkmode = new System.Windows.Forms.Timer(this.components);
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxMain)).BeginInit();
             this.SuspendLayout();
@@ -71,20 +74,20 @@ namespace SuperCoders_SharpView
             // mnuFileOpen
             // 
             this.mnuFileOpen.Name = "mnuFileOpen";
-            this.mnuFileOpen.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileOpen.Size = new System.Drawing.Size(103, 22);
             this.mnuFileOpen.Text = "Open";
             this.mnuFileOpen.Click += new System.EventHandler(this.mnuFileOpen_Click);
             // 
             // mnuFileClose
             // 
             this.mnuFileClose.Name = "mnuFileClose";
-            this.mnuFileClose.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileClose.Size = new System.Drawing.Size(103, 22);
             this.mnuFileClose.Text = "Close";
             // 
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileExit.Size = new System.Drawing.Size(103, 22);
             this.mnuFileExit.Text = "Exit ";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 
@@ -156,6 +159,11 @@ namespace SuperCoders_SharpView
     "g\\Desktop images";
             this.ofdMain.RestoreDirectory = true;
             // 
+            // timerCheckDarkmode
+            // 
+            this.timerCheckDarkmode.Enabled = true;
+            this.timerCheckDarkmode.Tick += new System.EventHandler(this.timerCheckDarkmode_Tick);
+            // 
             // FormSharpView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +175,7 @@ namespace SuperCoders_SharpView
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.PicBoxMain);
             this.Controls.Add(this.menuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 599);
             this.Name = "FormSharpView";
             this.Text = "Super Coder Sharp View";
@@ -191,6 +200,7 @@ namespace SuperCoders_SharpView
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnLast;
         private System.Windows.Forms.OpenFileDialog ofdMain;
+        private System.Windows.Forms.Timer timerCheckDarkmode;
     }
 }
 

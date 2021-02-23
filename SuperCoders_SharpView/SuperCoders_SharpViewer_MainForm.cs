@@ -46,5 +46,32 @@ namespace SuperCoders_SharpView
             OptionsForm Options = new OptionsForm();
             Options.Show();
         }
+
+        private void timerCheckDarkmode_Tick(object sender, EventArgs e)
+        {
+            //OptionsForm Options = new OptionsForm();
+
+            //if (Options.darkEnable = true)
+            //{
+
+            //    this.BackColor = ColorTranslator.FromHtml("#626262");
+            //    menuStrip2.BackColor = ColorTranslator.FromHtml("#626262");
+            //    mnuOptions.BackColor = ColorTranslator.FromHtml("#626262");
+            //    mnuOptions.ForeColor = Color.White;
+
+               
+
+            //}
+            //else
+            //{
+            //    this.BackColor = Color.White;
+            //    menuStrip2.BackColor = Color.White;
+            //    mnuOptions.BackColor = Color.White;
+            //    mnuOptions.ForeColor = Color.Black;
+               
+             
+
+            //}
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.checkBoxEnableSplashScreen = new System.Windows.Forms.CheckBox();
             this.checkBoxRememberLast = new System.Windows.Forms.CheckBox();
             this.checkBoxDarkMode = new System.Windows.Forms.CheckBox();
@@ -68,6 +69,7 @@
             this.checkBoxDarkMode.Text = "Dark Mode";
             this.checkBoxDarkMode.UseVisualStyleBackColor = false;
             this.checkBoxDarkMode.CheckedChanged += new System.EventHandler(this.checkBoxDarkMode_CheckedChanged);
+            this.checkBoxDarkMode.Click += new System.EventHandler(this.checkBoxDarkMode_Click);
             // 
             // labelCredits
             // 
@@ -88,7 +90,8 @@
             this.Controls.Add(this.checkBoxDarkMode);
             this.Controls.Add(this.checkBoxRememberLast);
             this.Controls.Add(this.checkBoxEnableSplashScreen);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OptionsForm";
             this.Text = "Options";
             this.ResumeLayout(false);

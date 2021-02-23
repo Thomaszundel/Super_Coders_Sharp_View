@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SuperCoders_SharpView.Properties;
 
 namespace SuperCoders_SharpView
 {
@@ -29,21 +30,37 @@ namespace SuperCoders_SharpView
             //really have no idea where to start here :\
         }
 
-        private void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
+        public void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
         {
-            OptionsForm opt = new OptionsForm();
+            bool darkEnable;
             if (checkBoxDarkMode.Checked)
             {
-                
-                opt.BackColor = Color.DimGray;
-                checkBoxEnableSplashScreen.BackColor = Color.DimGray;
+                darkEnable = true;
+                this.BackColor = ColorTranslator.FromHtml("#626262");
+                checkBoxDarkMode.BackColor = ColorTranslator.FromHtml("#626262");
+                checkBoxEnableSplashScreen.ForeColor = Color.White;
+                checkBoxRememberLast.ForeColor = Color.White;
+                checkBoxDarkMode.ForeColor = Color.White;
+                labelCredits.ForeColor = Color.White;
+
             }
             else
             {
-                opt.BackColor = Color.White;
-                checkBoxEnableSplashScreen.BackColor = Color.White;
+                darkEnable = false;
+                this.BackColor = Color.White;
+                checkBoxDarkMode.BackColor = Color.White;
+                checkBoxEnableSplashScreen.ForeColor = Color.Black;
+                checkBoxRememberLast.ForeColor = Color.Black;
+                checkBoxDarkMode.ForeColor = Color.Black;
+                labelCredits.ForeColor = Color.Black;
+
             }
-            opt.Refresh();
+            
+        }
+
+        private void checkBoxDarkMode_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
