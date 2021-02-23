@@ -130,21 +130,23 @@ namespace SuperCoders_SharpView
             // btnNext
             // 
             this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnNext.Font = new System.Drawing.Font("Wingdings", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnNext.Location = new System.Drawing.Point(376, 531);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 9;
-            this.btnNext.Text = "button1";
+            this.btnNext.Text = "è";
             this.btnNext.UseVisualStyleBackColor = true;
             // 
             // btnLast
             // 
             this.btnLast.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLast.Font = new System.Drawing.Font("Wingdings", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnLast.Location = new System.Drawing.Point(252, 531);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(75, 23);
             this.btnLast.TabIndex = 10;
-            this.btnLast.Text = "button2";
+            this.btnLast.Text = "ç";
             this.btnLast.UseVisualStyleBackColor = true;
             // 
             // ofdMain

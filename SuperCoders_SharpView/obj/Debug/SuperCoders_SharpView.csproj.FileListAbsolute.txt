@@ -65,3 +65,4 @@ C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug
 C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
 C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
 C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
+D:\Winter 2021\IT111\Group Project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.OptionsForm.resources
