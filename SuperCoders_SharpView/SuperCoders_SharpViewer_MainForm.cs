@@ -38,5 +38,11 @@ namespace SuperCoders_SharpView
         {
             this.Close();
         }
+
+        private void mnuOptions_Click(object sender, EventArgs e)
+        {
+            OptionsForm Options = new OptionsForm();
+            Options.Show();
+        }
     }
 }
