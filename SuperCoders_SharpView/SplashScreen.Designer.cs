@@ -30,6 +30,7 @@ namespace SuperCoders_SharpView
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.pbSplash = new System.Windows.Forms.PictureBox();
             this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbSplash)).BeginInit();
@@ -58,6 +59,7 @@ namespace SuperCoders_SharpView
             this.ClientSize = new System.Drawing.Size(498, 280);
             this.Controls.Add(this.pbSplash);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
