@@ -44,6 +44,7 @@ namespace SuperCoders_SharpView
             this.pbSplash.TabIndex = 0;
             this.pbSplash.TabStop = false;
             this.pbSplash.Click += new System.EventHandler(this.pbSplash_Click);
+            this.pbSplash.Paint += new System.Windows.Forms.PaintEventHandler(this.pbSplash_Paint);
             // 
             // SplashTimer
             // 
@@ -55,6 +56,7 @@ namespace SuperCoders_SharpView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(498, 280);
             this.Controls.Add(this.pbSplash);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
