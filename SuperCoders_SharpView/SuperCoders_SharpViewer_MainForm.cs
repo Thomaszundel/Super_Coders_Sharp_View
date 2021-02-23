@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SuperCoders_SharpView
 {
@@ -31,6 +32,7 @@ namespace SuperCoders_SharpView
                 // change this in properties
                 //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 PicBoxMain.Image = Image.FromFile(ofd.FileName);
+                lblName.Text = Path.GetFileNameWithoutExtension(ofd.FileName);
             }
         }
 
