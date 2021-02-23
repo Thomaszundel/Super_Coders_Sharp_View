@@ -93,12 +93,13 @@ namespace SuperCoders_SharpView
             this.mnuOptions.Name = "mnuOptions";
             this.mnuOptions.Size = new System.Drawing.Size(61, 20);
             this.mnuOptions.Text = "Options";
+            this.mnuOptions.Click += new System.EventHandler(this.mnuOptions_Click);
             // 
             // PicBoxMain
             // 
             this.PicBoxMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PicBoxMain.Location = new System.Drawing.Point(0, 24);
-            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(2);
             this.PicBoxMain.Name = "PicBoxMain";
             this.PicBoxMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.PicBoxMain.Size = new System.Drawing.Size(804, 537);

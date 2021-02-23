@@ -53,3 +53,15 @@ D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_S
 D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
 D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
 D:\Winter 2021\IT111\group project\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe.config
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.pdb
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csprojAssemblyReference.cache
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.OptionsForm.resources
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.FormSharpView.resources
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.Properties.Resources.resources
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.SplashScreen.resources
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.GenerateResource.cache
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
+C:\Users\alexa\source\GitHubRepos\New folder (2)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
