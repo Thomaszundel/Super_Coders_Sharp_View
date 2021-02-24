@@ -29,10 +29,10 @@ namespace SuperCoders_SharpView
         {
             //really have no idea where to start here :\
         }
-
+        public bool darkEnable;
         public void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
         {
-            bool darkEnable;
+            
             if (checkBoxDarkMode.Checked)
             {
                 darkEnable = true;
@@ -58,9 +58,6 @@ namespace SuperCoders_SharpView
             
         }
 
-        private void checkBoxDarkMode_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

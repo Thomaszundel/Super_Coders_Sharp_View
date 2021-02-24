@@ -64,7 +64,7 @@ namespace SuperCoders_SharpView
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Splash Screen";
             ((System.ComponentModel.ISupportInitialize)(this.pbSplash)).EndInit();
             this.ResumeLayout(false);
 

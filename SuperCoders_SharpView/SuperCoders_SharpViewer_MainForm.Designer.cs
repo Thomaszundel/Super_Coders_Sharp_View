@@ -74,21 +74,21 @@ namespace SuperCoders_SharpView
             // mnuFileOpen
             // 
             this.mnuFileOpen.Name = "mnuFileOpen";
-            this.mnuFileOpen.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileOpen.Size = new System.Drawing.Size(103, 22);
             this.mnuFileOpen.Text = "Open";
             this.mnuFileOpen.Click += new System.EventHandler(this.mnuFileOpen_Click);
             // 
             // mnuFileClose
             // 
             this.mnuFileClose.Name = "mnuFileClose";
-            this.mnuFileClose.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileClose.Size = new System.Drawing.Size(103, 22);
             this.mnuFileClose.Text = "Close";
             this.mnuFileClose.Click += new System.EventHandler(this.mnuFileClose_Click);
             // 
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileExit.Size = new System.Drawing.Size(103, 22);
             this.mnuFileExit.Text = "Exit ";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 
@@ -103,7 +103,7 @@ namespace SuperCoders_SharpView
             // 
             this.PicBoxMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PicBoxMain.Location = new System.Drawing.Point(0, 24);
-            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(2);
             this.PicBoxMain.Name = "PicBoxMain";
             this.PicBoxMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.PicBoxMain.Size = new System.Drawing.Size(804, 537);
@@ -182,7 +182,7 @@ namespace SuperCoders_SharpView
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 597);
             this.Name = "FormSharpView";
-            this.Text = "Super Coder Sharp View";
+            this.Text = "Super Coders Sharp View";
             this.Load += new System.EventHandler(this.FormSharpView_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
