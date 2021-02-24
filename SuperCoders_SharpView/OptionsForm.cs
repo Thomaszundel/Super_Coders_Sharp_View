@@ -20,7 +20,6 @@ namespace SuperCoders_SharpView
 
         private void checkBoxEnableSplashScreen_CheckedChanged(object sender, EventArgs e)
         {
-
             SplashScreen splash = new SplashScreen();
             splash.Enabled = false;
         }
