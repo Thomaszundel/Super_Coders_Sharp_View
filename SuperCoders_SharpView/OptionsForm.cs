@@ -84,5 +84,14 @@ namespace SuperCoders_SharpView
                 // save last filepath
             }
         }
+        public string LoadLastPhoto()
+        {
+            using (StreamReader sr = new StreamReader(@"C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\Resources\LastUsed.txt"))
+            {
+                string lastPhoto = sr.ReadLine().ToString();
+                return lastPhoto;
+            }
+        }
+
     }
 }

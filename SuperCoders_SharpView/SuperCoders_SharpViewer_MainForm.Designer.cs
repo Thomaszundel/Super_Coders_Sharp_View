@@ -103,7 +103,7 @@ namespace SuperCoders_SharpView
             // 
             this.PicBoxMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PicBoxMain.Location = new System.Drawing.Point(0, 24);
-            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PicBoxMain.Margin = new System.Windows.Forms.Padding(2);
             this.PicBoxMain.Name = "PicBoxMain";
             this.PicBoxMain.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.PicBoxMain.Size = new System.Drawing.Size(804, 537);
@@ -183,6 +183,7 @@ namespace SuperCoders_SharpView
             this.MinimumSize = new System.Drawing.Size(800, 597);
             this.Name = "FormSharpView";
             this.Text = "Super Coder Sharp View";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSharpView_FormClosing);
             this.Load += new System.EventHandler(this.FormSharpView_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
