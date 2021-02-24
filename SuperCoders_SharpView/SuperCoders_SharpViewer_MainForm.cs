@@ -13,6 +13,10 @@ namespace SuperCoders_SharpView
 {
     public partial class FormSharpView : Form
     {
+        protected string[] pFileNames;
+        protected int pCurrentImages = -1;
+        private int _pictureIndex = 0;
+        string filePath;
         public FormSharpView()
         {
             InitializeComponent();
@@ -23,16 +27,12 @@ namespace SuperCoders_SharpView
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "jpg (*.jpg)|*.jpg|bmp (*.bmp)|*.bmp|png (*.png)|*.png";
 
-
-
-
-
             if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
             {
-                // change this in properties
-                //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+               
                 PicBoxMain.Image = Image.FromFile(ofd.FileName);
                 lblName.Text = Path.GetFileNameWithoutExtension(ofd.FileName);
+                filePath = Path.GetDirectoryName(ofd.FileName);
             }
         }
 
@@ -72,6 +72,25 @@ namespace SuperCoders_SharpView
              
 
             //}
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+            //**get files from directory**
+            string[] files = Directory.GetFiles(filePath);
+            _pictureIndex++;
+            if (_pictureIndex >= files.Length)
+            {
+                _pictureIndex = 0;
+            }
+
+            //**load pictureBox**
+            PicBoxMain.Image = Image.FromFile(files[_pictureIndex]);
+
+            //**clear label and load with new file name**
+            lblName.Text = "";
+            lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
         }
     }
 }
