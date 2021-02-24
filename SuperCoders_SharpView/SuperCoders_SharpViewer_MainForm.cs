@@ -15,6 +15,7 @@ namespace SuperCoders_SharpView
     {
         private int _pictureIndex = 0;
         string filePath;
+        string filePathFull;
         public FormSharpView()
         {
             InitializeComponent();
@@ -31,10 +32,13 @@ namespace SuperCoders_SharpView
                 PicBoxMain.Image = Image.FromFile(ofd.FileName);
                 lblName.Text = Path.GetFileNameWithoutExtension(ofd.FileName);
                 filePath = Path.GetDirectoryName(ofd.FileName);
+                filePathFull = Path.GetFullPath(ofd.FileName);
             }
         }
         private void mnuFileExit_Click(object sender, EventArgs e)
         {
+            OptionsForm opt = new OptionsForm();
+            opt.Save(filePathFull);
             this.Close();
         }
         private void mnuOptions_Click(object sender, EventArgs e)
@@ -82,6 +86,7 @@ namespace SuperCoders_SharpView
             //**clear label and load with new file name**
             lblName.Text = "";
             lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
+            filePathFull = Path.GetFullPath(files[_pictureIndex]);
         }
 
         private void mnuFileClose_Click(object sender, EventArgs e)

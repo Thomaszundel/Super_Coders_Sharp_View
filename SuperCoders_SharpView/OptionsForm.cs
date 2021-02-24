@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SuperCoders_SharpView.Properties;
+using System.IO;
 
 namespace SuperCoders_SharpView
 {
     public partial class OptionsForm : Form
     {
+        bool remember = false;
         public OptionsForm()
         {
             InitializeComponent();
@@ -25,8 +27,14 @@ namespace SuperCoders_SharpView
         }
 
         private void checkBoxRememberLast_CheckedChanged(object sender, EventArgs e)
-        {
-            //really have no idea where to start here :\
+        {   
+            if (checkBoxRememberLast.Checked == true)
+            {
+                remember = true;
+            } else
+            {
+                remember = false;
+            }
         }
 
         public void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
@@ -60,6 +68,21 @@ namespace SuperCoders_SharpView
         private void checkBoxDarkMode_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void Save(string lastPhoto)
+        {
+            remember = true;
+            if (remember == true)
+            {
+                using (StreamWriter sw = new StreamWriter(@"C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\Resources\LastUsed.txt"))
+                {
+                    sw.Write("");
+                    sw.WriteLine(lastPhoto);
+                }
+
+                // save last filepath
+            }
         }
     }
 }

@@ -101,5 +101,8 @@
   <ItemGroup>
     <None Include="Resources\karlson_vibe.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LastUsed.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
