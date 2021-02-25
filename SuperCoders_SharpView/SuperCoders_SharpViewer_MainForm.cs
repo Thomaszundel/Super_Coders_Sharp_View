@@ -102,7 +102,10 @@ namespace SuperCoders_SharpView
         {
             OptionsForm opt = new OptionsForm();
             string lastPhoto = opt.LoadLastPhoto();
-            FileConfig(lastPhoto);
+            if (lastPhoto != null)
+            {
+                FileConfig(lastPhoto);
+            }           
             lblName.Text = "";
             lblImgNumber.Text = "";          
         }
