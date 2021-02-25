@@ -79,15 +79,15 @@ C:\Users\jenni\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\De
 C:\Users\jenni\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
 C:\Users\jenni\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
 C:\Users\jenni\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe.config
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.pdb
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csprojAssemblyReference.cache
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.OptionsForm.resources
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.FormSharpView.resources
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.Properties.Resources.resources
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.SplashScreen.resources
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.GenerateResource.cache
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
-C:\Users\alexa\source\GitHubRepos\New folder (3)\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe.config
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.exe
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\bin\Debug\SuperCoders_SharpView.pdb
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csprojAssemblyReference.cache
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.OptionsForm.resources
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.FormSharpView.resources
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.Properties.Resources.resources
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.SplashScreen.resources
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.GenerateResource.cache
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.csproj.CoreCompileInputs.cache
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.exe
+C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\obj\Debug\SuperCoders_SharpView.pdb

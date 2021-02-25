@@ -15,6 +15,7 @@ namespace SuperCoders_SharpView
     {
         private int _pictureIndex = 0;
         string filePath;
+        string filePathFull;
         public FormSharpView()
         {
             InitializeComponent();
@@ -26,12 +27,17 @@ namespace SuperCoders_SharpView
 
             if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
             {
-                btnNext.Enabled = true;
-                btnLast.Enabled = true;
-                PicBoxMain.Image = Image.FromFile(ofd.FileName);
-                lblName.Text = Path.GetFileNameWithoutExtension(ofd.FileName);
-                filePath = Path.GetDirectoryName(ofd.FileName);
+                FileConfig(ofd.FileName);
             }
+        }
+        private void FileConfig(string FileName)
+        {
+            btnNext.Enabled = true;
+            btnLast.Enabled = true;
+            PicBoxMain.Image = Image.FromFile(FileName);
+            lblName.Text = Path.GetFileNameWithoutExtension(FileName);
+            filePath = Path.GetDirectoryName(FileName);
+            filePathFull = Path.GetFullPath(FileName);
         }
         private void mnuFileExit_Click(object sender, EventArgs e)
         {
@@ -82,6 +88,7 @@ namespace SuperCoders_SharpView
             //**clear label and load with new file name**
             lblName.Text = "";
             lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
+            filePathFull = Path.GetFullPath(files[_pictureIndex]);
         }
 
         private void mnuFileClose_Click(object sender, EventArgs e)
@@ -93,8 +100,22 @@ namespace SuperCoders_SharpView
         }
         private void FormSharpView_Load(object sender, EventArgs e)
         {
+            OptionsForm opt = new OptionsForm();
+            string lastPhoto = opt.LoadLastPhoto();
+            if (lastPhoto != null)
+            {
+                FileConfig(lastPhoto);
+            }           
             lblName.Text = "";
-            lblImgNumber.Text = "";
+            lblImgNumber.Text = "";          
         }
+
+        private void FormSharpView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            OptionsForm opt = new OptionsForm();
+            opt.Save(filePathFull);
+        }
+
+
     }
 }

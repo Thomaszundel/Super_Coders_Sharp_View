@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SuperCoders_SharpView.Properties;
+using System.IO;
+using System.Configuration;
 
 namespace SuperCoders_SharpView
 {
     public partial class OptionsForm : Form
     {
+        bool remember = false;
         public OptionsForm()
         {
             InitializeComponent();
@@ -20,19 +23,24 @@ namespace SuperCoders_SharpView
 
         private void checkBoxEnableSplashScreen_CheckedChanged(object sender, EventArgs e)
         {
-
             SplashScreen splash = new SplashScreen();
             splash.Enabled = false;
         }
 
         private void checkBoxRememberLast_CheckedChanged(object sender, EventArgs e)
-        {
-            //really have no idea where to start here :\
+        {   
+            if (checkBoxRememberLast.Checked == true)
+            {
+                remember = true;
+            } else
+            {
+                remember = false;
+            }
         }
-        public bool darkEnable;
+
         public void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
         {
-            
+            bool darkEnable;
             if (checkBoxDarkMode.Checked)
             {
                 darkEnable = true;
@@ -58,6 +66,40 @@ namespace SuperCoders_SharpView
             
         }
 
-       
+        private void checkBoxDarkMode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void Save(string lastPhoto)
+        {
+            remember = true;
+            if (remember == true)
+            {
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                AppSettingsSection app = config.AppSettings;
+                app.Settings.Clear();
+                app.Settings.Add("LastPhoto", lastPhoto);
+                config.Save(ConfigurationSaveMode.Minimal);
+            }
+        }
+        public string LoadLastPhoto()
+        {
+            string lastPhoto = null;
+            remember = true;
+            if (remember == true)
+            {             
+                string result = ConfigurationManager.AppSettings["LastPhoto"];
+                if (result != null && result != "")
+                {
+                    lastPhoto = result;                  
+                }
+            } else
+            {
+                lastPhoto = null;
+            }
+            return lastPhoto;
+        }
+
     }
 }
