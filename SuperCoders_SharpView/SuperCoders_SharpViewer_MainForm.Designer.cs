@@ -80,6 +80,7 @@ namespace SuperCoders_SharpView
             // 
             // mnuFileClose
             // 
+            this.mnuFileClose.Enabled = false;
             this.mnuFileClose.Name = "mnuFileClose";
             this.mnuFileClose.Size = new System.Drawing.Size(180, 22);
             this.mnuFileClose.Text = "Close";
@@ -115,7 +116,7 @@ namespace SuperCoders_SharpView
             // 
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(503, 536);
+            this.lblName.Location = new System.Drawing.Point(553, 536);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 7;
@@ -125,7 +126,7 @@ namespace SuperCoders_SharpView
             // 
             this.lblImgNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblImgNumber.AutoSize = true;
-            this.lblImgNumber.Location = new System.Drawing.Point(153, 536);
+            this.lblImgNumber.Location = new System.Drawing.Point(161, 535);
             this.lblImgNumber.Name = "lblImgNumber";
             this.lblImgNumber.Size = new System.Drawing.Size(35, 13);
             this.lblImgNumber.TabIndex = 8;
@@ -136,7 +137,7 @@ namespace SuperCoders_SharpView
             this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnNext.Enabled = false;
             this.btnNext.Font = new System.Drawing.Font("Wingdings", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnNext.Location = new System.Drawing.Point(376, 531);
+            this.btnNext.Location = new System.Drawing.Point(425, 531);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 9;
@@ -149,12 +150,13 @@ namespace SuperCoders_SharpView
             this.btnLast.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLast.Enabled = false;
             this.btnLast.Font = new System.Drawing.Font("Wingdings", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnLast.Location = new System.Drawing.Point(252, 531);
+            this.btnLast.Location = new System.Drawing.Point(274, 531);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(75, 23);
             this.btnLast.TabIndex = 10;
             this.btnLast.Text = "ç";
             this.btnLast.UseVisualStyleBackColor = true;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // ofdMain
             // 
