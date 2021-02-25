@@ -134,6 +134,10 @@ namespace SuperCoders_SharpView
             if (lastPhoto != null)
             {
                 FileConfig(lastPhoto);
+                files = Directory.GetFiles(filePath);
+                fileName = Path.GetFileNameWithoutExtension(lastPhoto);
+                GetPicNumber();
+                SetNumLbl();
             }           
             lblName.Text = "";
             lblImgNumber.Text = "";          
