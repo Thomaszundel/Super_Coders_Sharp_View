@@ -69,7 +69,7 @@
             this.checkBoxDarkMode.Text = "Dark Mode";
             this.checkBoxDarkMode.UseVisualStyleBackColor = false;
             this.checkBoxDarkMode.CheckedChanged += new System.EventHandler(this.checkBoxDarkMode_CheckedChanged);
-            this.checkBoxDarkMode.Click += new System.EventHandler(this.checkBoxDarkMode_Click);
+
             // 
             // labelCredits
             // 

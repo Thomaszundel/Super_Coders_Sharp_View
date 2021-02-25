@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SuperCoders_SharpView.Properties;
 using System.IO;
+using System.Configuration;
 
 namespace SuperCoders_SharpView
 {
@@ -39,29 +40,29 @@ namespace SuperCoders_SharpView
 
         public void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
         {
-            bool darkEnable;
-            if (checkBoxDarkMode.Checked)
-            {
-                darkEnable = true;
-                this.BackColor = ColorTranslator.FromHtml("#626262");
-                checkBoxDarkMode.BackColor = ColorTranslator.FromHtml("#626262");
-                checkBoxEnableSplashScreen.ForeColor = Color.White;
-                checkBoxRememberLast.ForeColor = Color.White;
-                checkBoxDarkMode.ForeColor = Color.White;
-                labelCredits.ForeColor = Color.White;
+            //bool darkEnable;
+            //if (checkBoxDarkMode.Checked)
+            //{
+            //    darkEnable = true;
+            //    this.BackColor = ColorTranslator.FromHtml("#626262");
+            //    checkBoxDarkMode.BackColor = ColorTranslator.FromHtml("#626262");
+            //    checkBoxEnableSplashScreen.ForeColor = Color.White;
+            //    checkBoxRememberLast.ForeColor = Color.White;
+            //    checkBoxDarkMode.ForeColor = Color.White;
+            //    labelCredits.ForeColor = Color.White;
 
-            }
-            else
-            {
-                darkEnable = false;
-                this.BackColor = Color.White;
-                checkBoxDarkMode.BackColor = Color.White;
-                checkBoxEnableSplashScreen.ForeColor = Color.Black;
-                checkBoxRememberLast.ForeColor = Color.Black;
-                checkBoxDarkMode.ForeColor = Color.Black;
-                labelCredits.ForeColor = Color.Black;
+            //}
+            //else
+            //{
+            //    darkEnable = false;
+            //    this.BackColor = Color.White;
+            //    checkBoxDarkMode.BackColor = Color.White;
+            //    checkBoxEnableSplashScreen.ForeColor = Color.Black;
+            //    checkBoxRememberLast.ForeColor = Color.Black;
+            //    checkBoxDarkMode.ForeColor = Color.Black;
+            //    labelCredits.ForeColor = Color.Black;
 
-            }
+            //}
             
         }
 
@@ -75,22 +76,29 @@ namespace SuperCoders_SharpView
             remember = true;
             if (remember == true)
             {
-                using (StreamWriter sw = new StreamWriter(@"C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\Resources\LastUsed.txt"))
-                {
-                    sw.Write("");
-                    sw.WriteLine(lastPhoto);
-                }
-
-                // save last filepath
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                AppSettingsSection app = config.AppSettings;
+                app.Settings.Clear();
+                app.Settings.Add("LastPhoto", lastPhoto);
+                config.Save(ConfigurationSaveMode.Minimal);
             }
         }
         public string LoadLastPhoto()
         {
-            using (StreamReader sr = new StreamReader(@"C:\Users\boyli\Source\Repos\Super_Coders_Sharp_View\SuperCoders_SharpView\Resources\LastUsed.txt"))
+            string lastPhoto = null;
+            remember = false;
+            if (remember == true)
+            {             
+                string result = ConfigurationManager.AppSettings["LastPhoto"];
+                if (result != null && result != "")
+                {
+                    lastPhoto = result;                  
+                }
+            } else
             {
-                string lastPhoto = sr.ReadLine().ToString();
-                return lastPhoto;
+                lastPhoto = null;
             }
+            return lastPhoto;
         }
 
     }
