@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Configuration;
 
 namespace SuperCoders_SharpView
 {
@@ -18,6 +19,8 @@ namespace SuperCoders_SharpView
         string filePathFull;
         string fileName;
         string[] files;
+        bool remember;
+        OptionsForm Options;
         public FormSharpView()
         {
             InitializeComponent();
@@ -70,12 +73,11 @@ namespace SuperCoders_SharpView
         }
         private void mnuOptions_Click(object sender, EventArgs e)
         {
-            OptionsForm Options = new OptionsForm();
             Options.Show();
         }
         private void timerCheckDarkmode_Tick(object sender, EventArgs e)
         {
-            OptionsForm Options = new OptionsForm();
+            OptionsForm Options = new OptionsForm(ref remember);
 
             //if (Options.darkEnable == true)
             //{
@@ -129,8 +131,17 @@ namespace SuperCoders_SharpView
         }
         private void FormSharpView_Load(object sender, EventArgs e)
         {
-            OptionsForm opt = new OptionsForm();
-            string lastPhoto = opt.LoadLastPhoto();
+            string result = ConfigurationManager.AppSettings["RememberPhoto"];
+            if (result == "True")
+            {
+                remember = true;
+            } else
+            {
+                remember = false;
+            }
+            Options = new OptionsForm(ref remember);
+            Options.Hide();
+            string lastPhoto = LoadLastPhoto();
             if (lastPhoto != null)
             {
                 FileConfig(lastPhoto);
@@ -145,8 +156,7 @@ namespace SuperCoders_SharpView
 
         private void FormSharpView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            OptionsForm opt = new OptionsForm();
-            opt.Save(filePathFull);
+            Save(filePathFull);
         }
 
         private void btnLast_Click(object sender, EventArgs e)
@@ -165,6 +175,39 @@ namespace SuperCoders_SharpView
             lblName.Text = "";
             lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
             SetNumLbl();
+        }
+
+        public void Save(string lastPhoto)
+        {
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            AppSettingsSection app = config.AppSettings;
+            app.Settings.Clear();
+            remember = Options.GetRemember();
+            if (remember == true)
+            {
+                app.Settings.Add("LastPhoto", lastPhoto);                
+            }
+            app.Settings.Add("RememberPhoto", this.remember.ToString());
+            config.Save(ConfigurationSaveMode.Minimal);
+            string result = ConfigurationManager.AppSettings["RememberPhoto"];
+        }
+        private string LoadLastPhoto()
+        {
+            remember = Options.GetRemember();
+            string lastPhoto = null;
+            if (remember == true)
+            {
+                string result = ConfigurationManager.AppSettings["LastPhoto"];
+                if (result != null && result != "")
+                {
+                    lastPhoto = result;
+                }
+            }
+            else
+            {
+                lastPhoto = null;
+            }
+            return lastPhoto;
         }
     }
 }

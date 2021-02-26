@@ -15,10 +15,11 @@ namespace SuperCoders_SharpView
 {
     public partial class OptionsForm : Form
     {
-        bool remember = false;
-        public OptionsForm()
+        bool remember;
+        public OptionsForm(ref bool mainRemember)
         {
             InitializeComponent();
+            remember = mainRemember;
         }
 
         private void checkBoxEnableSplashScreen_CheckedChanged(object sender, EventArgs e)
@@ -28,11 +29,12 @@ namespace SuperCoders_SharpView
         }
 
         private void checkBoxRememberLast_CheckedChanged(object sender, EventArgs e)
-        {   
+        {
             if (checkBoxRememberLast.Checked == true)
             {
                 remember = true;
-            } else
+            }
+            else
             {
                 remember = false;
             }
@@ -71,35 +73,27 @@ namespace SuperCoders_SharpView
 
         }
 
-        public void Save(string lastPhoto)
+        private void OptionsForm_Load(object sender, EventArgs e)
         {
-            remember = true;
             if (remember == true)
-            {
-                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                AppSettingsSection app = config.AppSettings;
-                app.Settings.Clear();
-                app.Settings.Add("LastPhoto", lastPhoto);
-                config.Save(ConfigurationSaveMode.Minimal);
-            }
-        }
-        public string LoadLastPhoto()
-        {
-            string lastPhoto = null;
-            remember = false;
-            if (remember == true)
-            {             
-                string result = ConfigurationManager.AppSettings["LastPhoto"];
-                if (result != null && result != "")
-                {
-                    lastPhoto = result;                  
-                }
-            } else
-            {
-                lastPhoto = null;
-            }
-            return lastPhoto;
+                checkBoxRememberLast.Checked = true;
+            else
+                checkBoxRememberLast.Checked = false;
         }
 
+        public bool GetRemember()
+        {
+            return remember;
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+            
+            e.Cancel = true;
+            this.Hide();
+        }
     }
 }

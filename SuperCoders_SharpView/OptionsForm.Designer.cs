@@ -69,7 +69,6 @@
             this.checkBoxDarkMode.Text = "Dark Mode";
             this.checkBoxDarkMode.UseVisualStyleBackColor = false;
             this.checkBoxDarkMode.CheckedChanged += new System.EventHandler(this.checkBoxDarkMode_CheckedChanged);
-
             // 
             // labelCredits
             // 
@@ -94,6 +93,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OptionsForm";
             this.Text = "Options";
+            this.Load += new System.EventHandler(this.OptionsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
