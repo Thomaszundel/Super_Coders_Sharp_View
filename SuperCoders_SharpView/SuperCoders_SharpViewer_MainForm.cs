@@ -20,6 +20,7 @@ namespace SuperCoders_SharpView
         string fileName;
         string[] files;
         bool remember;
+        //bool darkEnable;
         OptionsForm Options;
         public FormSharpView()
         {
@@ -79,13 +80,14 @@ namespace SuperCoders_SharpView
         {
             OptionsForm Options = new OptionsForm(ref remember);
 
-            //if (Options.darkEnable == true)
+            //OptionsForm Optionsd = new OptionsForm(ref darkEnable);
+            //if (darkEnable = Optionsd.GetDark() = true)
             //{
 
             //    this.BackColor = ColorTranslator.FromHtml("#626262");
-            //    menuStrip2.BackColor = ColorTranslator.FromHtml("#626262");
-            //    mnuOptions.BackColor = ColorTranslator.FromHtml("#626262");
-            //    mnuOptions.ForeColor = Color.White;
+                //    menuStrip2.BackColor = ColorTranslator.FromHtml("#626262");
+                //    mnuOptions.BackColor = ColorTranslator.FromHtml("#626262");
+                //    mnuOptions.ForeColor = Color.White;
 
 
 
@@ -93,9 +95,9 @@ namespace SuperCoders_SharpView
             //else
             //{
             //    this.BackColor = Color.White;
-            //    menuStrip2.BackColor = Color.White;
-            //    mnuOptions.BackColor = Color.White;
-            //    mnuOptions.ForeColor = Color.Black;
+                //    menuStrip2.BackColor = Color.White;
+                //    mnuOptions.BackColor = Color.White;
+                //    mnuOptions.ForeColor = Color.Black;
 
 
 
