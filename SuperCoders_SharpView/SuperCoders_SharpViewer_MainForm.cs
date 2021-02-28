@@ -213,5 +213,30 @@ namespace SuperCoders_SharpView
             }
             return lastPhoto;
         }
+
+        private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //***open folder dialog and set start up path***//
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.Description = "Select a folder";
+            fbd.SelectedPath = Application.StartupPath;
+            fbd.ShowNewFolderButton = false;
+            if (DialogResult.OK == fbd.ShowDialog())
+            {
+                mnuFileClose.Enabled = true;
+                files = Directory.GetFiles(fbd.SelectedPath, "*.*");
+                if (_pictureIndex > files.Length - 1)
+                {
+                    _pictureIndex = -1;
+                }
+                PicBoxMain.Image = Image.FromFile(files[_pictureIndex]);
+                btnNext.Enabled = true;
+                btnLast.Enabled = true;
+                lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
+                filePath = Path.GetDirectoryName(files[_pictureIndex]);
+                SetNumLbl();
+                fbd.Dispose();
+            }
+        }
     }
 }
