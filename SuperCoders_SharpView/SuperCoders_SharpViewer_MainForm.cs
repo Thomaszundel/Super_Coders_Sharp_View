@@ -144,6 +144,8 @@ namespace SuperCoders_SharpView
             Options = new OptionsForm(ref remember);
             Options.Hide();
             string lastPhoto = LoadLastPhoto();
+            lblName.Text = "";
+            lblImgNumber.Text = "";
             if (lastPhoto != null)
             {
                 FileConfig(lastPhoto);
@@ -152,8 +154,7 @@ namespace SuperCoders_SharpView
                 GetPicNumber();
                 SetNumLbl();
             }           
-            lblName.Text = "";
-            lblImgNumber.Text = "";          
+                    
         }
 
         private void FormSharpView_FormClosing(object sender, FormClosingEventArgs e)
@@ -176,6 +177,7 @@ namespace SuperCoders_SharpView
             //**clear label and load with new file name**
             lblName.Text = "";
             lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
+            filePathFull = Path.GetFullPath(files[_pictureIndex]);
             SetNumLbl();
         }
 
