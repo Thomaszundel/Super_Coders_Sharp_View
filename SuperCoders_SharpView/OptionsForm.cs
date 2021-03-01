@@ -114,5 +114,10 @@ namespace SuperCoders_SharpView
             e.Cancel = true;
             this.Hide();
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
