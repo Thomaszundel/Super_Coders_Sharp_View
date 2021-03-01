@@ -238,12 +238,9 @@ namespace SuperCoders_SharpView
             fbd.ShowNewFolderButton = false;
             if (DialogResult.OK == fbd.ShowDialog())
             {
+                _pictureIndex = 0;
                 mnuFileClose.Enabled = true;
                 files = Directory.GetFiles(fbd.SelectedPath, "*.*");
-                if (_pictureIndex > files.Length - 1)
-                {
-                    _pictureIndex = -1;
-                }
                 PicBoxMain.Image = Image.FromFile(files[_pictureIndex]);
                 btnNext.Enabled = true;
                 btnLast.Enabled = true;
