@@ -18,7 +18,7 @@ namespace SuperCoders_SharpView
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string splashResult = ConfigurationManager.AppSettings["SplashScreen"];
-            if (splashResult == "True")
+            if (splashResult != "True")
                 Application.Run(new SplashScreen());
             Application.Run(new FormSharpView());
         }
