@@ -22,7 +22,6 @@ namespace SuperCoders_SharpView
         bool remember;
         bool darkMode;
         bool splashScreen;
-        //bool darkEnable;
         OptionsForm Options;
         public FormSharpView()
         {
