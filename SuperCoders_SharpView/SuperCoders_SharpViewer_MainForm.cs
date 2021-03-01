@@ -46,8 +46,6 @@ namespace SuperCoders_SharpView
         }
         private void FileConfig(string FileName)
         {
-            try
-            {
                 mnuFileClose.Enabled = true;
                 btnNext.Enabled = true;
                 btnLast.Enabled = true;
@@ -55,11 +53,7 @@ namespace SuperCoders_SharpView
                 lblName.Text = Path.GetFileNameWithoutExtension(FileName);
                 filePath = Path.GetDirectoryName(FileName);
                 filePathFull = Path.GetFullPath(FileName);
-            }
-            catch
-            { 
-                PicBoxMain = default;
-            }
+           
         }
         public void SetNumLbl()
         {
@@ -167,18 +161,12 @@ namespace SuperCoders_SharpView
             lblImgNumber.Text = "";
             if (lastPhoto != null)
             {
-                try
-                {
                     FileConfig(lastPhoto);
                     files = Directory.GetFiles(filePath);
                     fileName = Path.GetFileNameWithoutExtension(lastPhoto);
                     GetPicNumber();
                     SetNumLbl();
-                }
-                catch
-                {
-                    PicBoxMain = default;
-                }
+               
             }           
                     
         }
@@ -273,7 +261,7 @@ namespace SuperCoders_SharpView
             }
             if (keyData == Keys.N)
             {
-                btnLast.PerformClick();
+                btnNext.PerformClick();
                 return true;
             }
 
