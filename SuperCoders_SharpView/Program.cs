@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace SuperCoders_SharpView
 {
@@ -16,7 +17,9 @@ namespace SuperCoders_SharpView
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashScreen());
+            string splashResult = ConfigurationManager.AppSettings["SplashScreen"];
+            if (splashResult == "True")
+                Application.Run(new SplashScreen());
             Application.Run(new FormSharpView());
         }
     }

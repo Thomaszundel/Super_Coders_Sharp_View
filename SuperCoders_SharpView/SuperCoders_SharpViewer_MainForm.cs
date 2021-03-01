@@ -21,6 +21,7 @@ namespace SuperCoders_SharpView
         string[] files;
         bool remember;
         bool darkMode;
+        bool splashScreen;
         //bool darkEnable;
         OptionsForm Options;
         public FormSharpView()
@@ -136,15 +137,23 @@ namespace SuperCoders_SharpView
         {
             string rememberResult = ConfigurationManager.AppSettings["RememberPhoto"];
             string darkResult = ConfigurationManager.AppSettings["DarkMode"];
+            string splashResult = ConfigurationManager.AppSettings["SplashScreen"];
             if (rememberResult == "True")
                 remember = true;
             else
                 remember = false;
+
             if (darkResult == "True")
                 darkMode = true;
             else
                 darkMode = false;
-            Options = new OptionsForm(ref remember, ref darkMode);
+
+            if (splashResult == "True")
+                splashScreen = true;
+            else
+                splashScreen = false;
+
+            Options = new OptionsForm(ref remember, ref darkMode, ref splashScreen);
             Options.Hide();
             string lastPhoto = LoadLastPhoto();
             lblName.Text = "";
@@ -191,13 +200,15 @@ namespace SuperCoders_SharpView
             app.Settings.Clear();
             remember = Options.GetRemember();
             darkMode = Options.GetDark();
+            splashScreen = Options.GetSplash();
             if (remember == true)
                 app.Settings.Add("LastPhoto", lastPhoto);
             if (darkMode == true)
                 app.Settings.Add("DarkMode", this.darkMode.ToString());
+            if (splashScreen == true)
+                app.Settings.Add("SplashScreen", this.splashScreen.ToString());
             app.Settings.Add("RememberPhoto", this.remember.ToString());
             config.Save(ConfigurationSaveMode.Minimal);
-            string result = ConfigurationManager.AppSettings["RememberPhoto"];
         }
         private string LoadLastPhoto()
         {

@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
-            this.checkBoxEnableSplashScreen = new System.Windows.Forms.CheckBox();
+            this.checkboxDisableSplashScreen = new System.Windows.Forms.CheckBox();
             this.checkBoxRememberLast = new System.Windows.Forms.CheckBox();
             this.checkBoxDarkMode = new System.Windows.Forms.CheckBox();
             this.labelCredits = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // checkBoxEnableSplashScreen
+            // checkboxDisableSplashScreen
             // 
-            this.checkBoxEnableSplashScreen.AutoSize = true;
-            this.checkBoxEnableSplashScreen.Location = new System.Drawing.Point(87, 51);
-            this.checkBoxEnableSplashScreen.Name = "checkBoxEnableSplashScreen";
-            this.checkBoxEnableSplashScreen.Size = new System.Drawing.Size(133, 17);
-            this.checkBoxEnableSplashScreen.TabIndex = 0;
-            this.checkBoxEnableSplashScreen.Text = "Disable Splash Screen";
-            this.checkBoxEnableSplashScreen.UseVisualStyleBackColor = true;
-            this.checkBoxEnableSplashScreen.CheckedChanged += new System.EventHandler(this.checkBoxEnableSplashScreen_CheckedChanged);
+            this.checkboxDisableSplashScreen.AutoSize = true;
+            this.checkboxDisableSplashScreen.Location = new System.Drawing.Point(87, 51);
+            this.checkboxDisableSplashScreen.Name = "checkboxDisableSplashScreen";
+            this.checkboxDisableSplashScreen.Size = new System.Drawing.Size(133, 17);
+            this.checkboxDisableSplashScreen.TabIndex = 0;
+            this.checkboxDisableSplashScreen.Text = "Disable Splash Screen";
+            this.checkboxDisableSplashScreen.UseVisualStyleBackColor = true;
+            this.checkboxDisableSplashScreen.CheckedChanged += new System.EventHandler(this.checkboxDisableSplashScreen_CheckedChanged);
             // 
             // checkBoxRememberLast
             // 
@@ -88,7 +88,7 @@
             this.Controls.Add(this.labelCredits);
             this.Controls.Add(this.checkBoxDarkMode);
             this.Controls.Add(this.checkBoxRememberLast);
-            this.Controls.Add(this.checkBoxEnableSplashScreen);
+            this.Controls.Add(this.checkboxDisableSplashScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OptionsForm";
@@ -101,7 +101,7 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBoxEnableSplashScreen;
+        private System.Windows.Forms.CheckBox checkboxDisableSplashScreen;
         private System.Windows.Forms.CheckBox checkBoxRememberLast;
         private System.Windows.Forms.CheckBox checkBoxDarkMode;
         private System.Windows.Forms.Label labelCredits;
