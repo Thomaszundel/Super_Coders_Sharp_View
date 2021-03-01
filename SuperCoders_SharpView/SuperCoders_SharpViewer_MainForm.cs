@@ -20,6 +20,7 @@ namespace SuperCoders_SharpView
         string fileName;
         string[] files;
         bool remember;
+        bool darkMode;
         //bool darkEnable;
         OptionsForm Options;
         public FormSharpView()
@@ -78,7 +79,7 @@ namespace SuperCoders_SharpView
         }
         private void timerCheckDarkmode_Tick(object sender, EventArgs e)
         {
-            OptionsForm Options = new OptionsForm(ref remember);
+            //OptionsForm Options = new OptionsForm(ref remember);
 
             //OptionsForm Optionsd = new OptionsForm(ref darkEnable);
             //if (darkEnable = Optionsd.GetDark() = true)
@@ -133,15 +134,17 @@ namespace SuperCoders_SharpView
         }
         private void FormSharpView_Load(object sender, EventArgs e)
         {
-            string result = ConfigurationManager.AppSettings["RememberPhoto"];
-            if (result == "True")
-            {
+            string rememberResult = ConfigurationManager.AppSettings["RememberPhoto"];
+            string darkResult = ConfigurationManager.AppSettings["DarkMode"];
+            if (rememberResult == "True")
                 remember = true;
-            } else
-            {
+            else
                 remember = false;
-            }
-            Options = new OptionsForm(ref remember);
+            if (darkResult == "True")
+                darkMode = true;
+            else
+                darkMode = false;
+            Options = new OptionsForm(ref remember, ref darkMode);
             Options.Hide();
             string lastPhoto = LoadLastPhoto();
             lblName.Text = "";
@@ -187,10 +190,11 @@ namespace SuperCoders_SharpView
             AppSettingsSection app = config.AppSettings;
             app.Settings.Clear();
             remember = Options.GetRemember();
+            darkMode = Options.GetDark();
             if (remember == true)
-            {
-                app.Settings.Add("LastPhoto", lastPhoto);                
-            }
+                app.Settings.Add("LastPhoto", lastPhoto);
+            if (darkMode == true)
+                app.Settings.Add("DarkMode", this.darkMode.ToString());
             app.Settings.Add("RememberPhoto", this.remember.ToString());
             config.Save(ConfigurationSaveMode.Minimal);
             string result = ConfigurationManager.AppSettings["RememberPhoto"];

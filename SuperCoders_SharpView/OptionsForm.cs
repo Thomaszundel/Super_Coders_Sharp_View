@@ -17,18 +17,12 @@ namespace SuperCoders_SharpView
     {
         bool remember;
         bool darkEnable;
-        public OptionsForm(ref bool mainRemember/*, ref bool mainDarkEnable*/)
+        public OptionsForm(ref bool mainRemember, ref bool mainDarkEnable, ref bool mainSplashDisable)
         {
             InitializeComponent();
             remember = mainRemember;
-            //darkEnable = mainDarkEnable;
+            darkEnable = mainDarkEnable;
         }
-
-        //public OptionsForm(ref bool mainDarkEnable)
-        //{
-        //    InitializeComponent();
-        //    darkEnable = mainDarkEnable;
-        //}
 
         private void checkBoxEnableSplashScreen_CheckedChanged(object sender, EventArgs e)
         {
@@ -46,11 +40,6 @@ namespace SuperCoders_SharpView
             {
                 remember = false;
             }
-        }
-
-        public bool GetDark()
-        {
-            return darkEnable;
         }
 
         public void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
@@ -93,12 +82,17 @@ namespace SuperCoders_SharpView
             if (darkEnable == true)
                 checkBoxDarkMode.Checked = true;
             else
-                checkBoxRememberLast.Checked = false;
+                checkBoxDarkMode.Checked = false;
         }
 
         public bool GetRemember()
         {
             return remember;
+        }
+
+        public bool GetDark()
+        {
+            return darkEnable;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

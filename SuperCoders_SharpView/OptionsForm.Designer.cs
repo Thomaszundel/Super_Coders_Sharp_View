@@ -40,9 +40,9 @@
             this.checkBoxEnableSplashScreen.AutoSize = true;
             this.checkBoxEnableSplashScreen.Location = new System.Drawing.Point(87, 51);
             this.checkBoxEnableSplashScreen.Name = "checkBoxEnableSplashScreen";
-            this.checkBoxEnableSplashScreen.Size = new System.Drawing.Size(136, 17);
+            this.checkBoxEnableSplashScreen.Size = new System.Drawing.Size(133, 17);
             this.checkBoxEnableSplashScreen.TabIndex = 0;
-            this.checkBoxEnableSplashScreen.Text = "Splash Screen enabled";
+            this.checkBoxEnableSplashScreen.Text = "Disable Splash Screen";
             this.checkBoxEnableSplashScreen.UseVisualStyleBackColor = true;
             this.checkBoxEnableSplashScreen.CheckedChanged += new System.EventHandler(this.checkBoxEnableSplashScreen_CheckedChanged);
             // 
