@@ -44,6 +44,7 @@ namespace SuperCoders_SharpView
             this.btnLast = new System.Windows.Forms.Button();
             this.ofdMain = new System.Windows.Forms.OpenFileDialog();
             this.timerCheckDarkmode = new System.Windows.Forms.Timer(this.components);
+            this.openFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxMain)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +66,7 @@ namespace SuperCoders_SharpView
             // 
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuFileOpen,
+            this.openFolderToolStripMenuItem,
             this.mnuFileClose,
             this.mnuFileExit});
             this.mnuFile.Name = "mnuFile";
@@ -83,7 +85,7 @@ namespace SuperCoders_SharpView
             this.mnuFileClose.Enabled = false;
             this.mnuFileClose.Name = "mnuFileClose";
             this.mnuFileClose.Size = new System.Drawing.Size(180, 22);
-            this.mnuFileClose.Text = "Close";
+            this.mnuFileClose.Text = "Close Image";
             this.mnuFileClose.Click += new System.EventHandler(this.mnuFileClose_Click);
             // 
             // mnuFileExit
@@ -170,6 +172,13 @@ namespace SuperCoders_SharpView
             this.timerCheckDarkmode.Enabled = true;
             this.timerCheckDarkmode.Tick += new System.EventHandler(this.timerCheckDarkmode_Tick);
             // 
+            // openFolderToolStripMenuItem
+            // 
+            this.openFolderToolStripMenuItem.Name = "openFolderToolStripMenuItem";
+            this.openFolderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openFolderToolStripMenuItem.Text = "Open Folder";
+            this.openFolderToolStripMenuItem.Click += new System.EventHandler(this.openFolderToolStripMenuItem_Click);
+            // 
             // FormSharpView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +218,7 @@ namespace SuperCoders_SharpView
         private System.Windows.Forms.Button btnLast;
         private System.Windows.Forms.OpenFileDialog ofdMain;
         private System.Windows.Forms.Timer timerCheckDarkmode;
+        private System.Windows.Forms.ToolStripMenuItem openFolderToolStripMenuItem;
     }
 }
 

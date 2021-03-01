@@ -20,6 +20,7 @@ namespace SuperCoders_SharpView
         string fileName;
         string[] files;
         bool remember;
+        //bool darkEnable;
         OptionsForm Options;
         public FormSharpView()
         {
@@ -79,13 +80,14 @@ namespace SuperCoders_SharpView
         {
             OptionsForm Options = new OptionsForm(ref remember);
 
-            //if (Options.darkEnable == true)
+            //OptionsForm Optionsd = new OptionsForm(ref darkEnable);
+            //if (darkEnable = Optionsd.GetDark() = true)
             //{
 
             //    this.BackColor = ColorTranslator.FromHtml("#626262");
-            //    menuStrip2.BackColor = ColorTranslator.FromHtml("#626262");
-            //    mnuOptions.BackColor = ColorTranslator.FromHtml("#626262");
-            //    mnuOptions.ForeColor = Color.White;
+                //    menuStrip2.BackColor = ColorTranslator.FromHtml("#626262");
+                //    mnuOptions.BackColor = ColorTranslator.FromHtml("#626262");
+                //    mnuOptions.ForeColor = Color.White;
 
 
 
@@ -93,9 +95,9 @@ namespace SuperCoders_SharpView
             //else
             //{
             //    this.BackColor = Color.White;
-            //    menuStrip2.BackColor = Color.White;
-            //    mnuOptions.BackColor = Color.White;
-            //    mnuOptions.ForeColor = Color.Black;
+                //    menuStrip2.BackColor = Color.White;
+                //    mnuOptions.BackColor = Color.White;
+                //    mnuOptions.ForeColor = Color.Black;
 
 
 
@@ -142,6 +144,8 @@ namespace SuperCoders_SharpView
             Options = new OptionsForm(ref remember);
             Options.Hide();
             string lastPhoto = LoadLastPhoto();
+            lblName.Text = "";
+            lblImgNumber.Text = "";
             if (lastPhoto != null)
             {
                 FileConfig(lastPhoto);
@@ -150,8 +154,7 @@ namespace SuperCoders_SharpView
                 GetPicNumber();
                 SetNumLbl();
             }           
-            lblName.Text = "";
-            lblImgNumber.Text = "";          
+                    
         }
 
         private void FormSharpView_FormClosing(object sender, FormClosingEventArgs e)
@@ -174,6 +177,7 @@ namespace SuperCoders_SharpView
             //**clear label and load with new file name**
             lblName.Text = "";
             lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
+            filePathFull = Path.GetFullPath(files[_pictureIndex]);
             SetNumLbl();
         }
 
@@ -208,6 +212,31 @@ namespace SuperCoders_SharpView
                 lastPhoto = null;
             }
             return lastPhoto;
+        }
+
+        private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //***open folder dialog and set start up path***//
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.Description = "Select a folder";
+            fbd.SelectedPath = Application.StartupPath;
+            fbd.ShowNewFolderButton = false;
+            if (DialogResult.OK == fbd.ShowDialog())
+            {
+                mnuFileClose.Enabled = true;
+                files = Directory.GetFiles(fbd.SelectedPath, "*.*");
+                if (_pictureIndex > files.Length - 1)
+                {
+                    _pictureIndex = -1;
+                }
+                PicBoxMain.Image = Image.FromFile(files[_pictureIndex]);
+                btnNext.Enabled = true;
+                btnLast.Enabled = true;
+                lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
+                filePath = Path.GetDirectoryName(files[_pictureIndex]);
+                SetNumLbl();
+                fbd.Dispose();
+            }
         }
     }
 }
