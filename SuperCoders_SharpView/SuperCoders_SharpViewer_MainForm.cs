@@ -46,13 +46,20 @@ namespace SuperCoders_SharpView
         }
         private void FileConfig(string FileName)
         {
-            mnuFileClose.Enabled = true;
-            btnNext.Enabled = true;
-            btnLast.Enabled = true;
-            PicBoxMain.Image = Image.FromFile(FileName);
-            lblName.Text = Path.GetFileNameWithoutExtension(FileName);
-            filePath = Path.GetDirectoryName(FileName);
-            filePathFull = Path.GetFullPath(FileName);
+            try
+            {
+                mnuFileClose.Enabled = true;
+                btnNext.Enabled = true;
+                btnLast.Enabled = true;
+                PicBoxMain.Image = Image.FromFile(FileName);
+                lblName.Text = Path.GetFileNameWithoutExtension(FileName);
+                filePath = Path.GetDirectoryName(FileName);
+                filePathFull = Path.GetFullPath(FileName);
+            }
+            catch
+            { 
+                PicBoxMain = default;
+            }
         }
         public void SetNumLbl()
         {
@@ -160,11 +167,18 @@ namespace SuperCoders_SharpView
             lblImgNumber.Text = "";
             if (lastPhoto != null)
             {
-                FileConfig(lastPhoto);
-                files = Directory.GetFiles(filePath);
-                fileName = Path.GetFileNameWithoutExtension(lastPhoto);
-                GetPicNumber();
-                SetNumLbl();
+                try
+                {
+                    FileConfig(lastPhoto);
+                    files = Directory.GetFiles(filePath);
+                    fileName = Path.GetFileNameWithoutExtension(lastPhoto);
+                    GetPicNumber();
+                    SetNumLbl();
+                }
+                catch
+                {
+                    PicBoxMain = default;
+                }
             }           
                     
         }
@@ -249,6 +263,33 @@ namespace SuperCoders_SharpView
                 SetNumLbl();
                 fbd.Dispose();
             }
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.L)
+            {
+                btnLast.PerformClick();
+                return true;
+            }
+            if (keyData == Keys.N)
+            {
+                btnLast.PerformClick();
+                return true;
+            }
+
+            //capture left arrow key
+            if (keyData == Keys.Left)
+            {
+                btnLast.PerformClick();
+                return true;
+            }
+            //capture right arrow key
+            if (keyData == Keys.Right)
+            {
+                btnNext.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
