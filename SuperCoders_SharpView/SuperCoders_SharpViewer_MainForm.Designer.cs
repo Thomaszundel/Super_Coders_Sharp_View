@@ -34,6 +34,7 @@ namespace SuperCoders_SharpView
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileClose = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuOptions = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,6 @@ namespace SuperCoders_SharpView
             this.btnLast = new System.Windows.Forms.Button();
             this.ofdMain = new System.Windows.Forms.OpenFileDialog();
             this.timerCheckDarkmode = new System.Windows.Forms.Timer(this.components);
-            this.openFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxMain)).BeginInit();
             this.SuspendLayout();
@@ -76,22 +76,29 @@ namespace SuperCoders_SharpView
             // mnuFileOpen
             // 
             this.mnuFileOpen.Name = "mnuFileOpen";
-            this.mnuFileOpen.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileOpen.Size = new System.Drawing.Size(139, 22);
             this.mnuFileOpen.Text = "Open";
             this.mnuFileOpen.Click += new System.EventHandler(this.mnuFileOpen_Click);
+            // 
+            // openFolderToolStripMenuItem
+            // 
+            this.openFolderToolStripMenuItem.Name = "openFolderToolStripMenuItem";
+            this.openFolderToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.openFolderToolStripMenuItem.Text = "Open Folder";
+            this.openFolderToolStripMenuItem.Click += new System.EventHandler(this.openFolderToolStripMenuItem_Click);
             // 
             // mnuFileClose
             // 
             this.mnuFileClose.Enabled = false;
             this.mnuFileClose.Name = "mnuFileClose";
-            this.mnuFileClose.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileClose.Size = new System.Drawing.Size(139, 22);
             this.mnuFileClose.Text = "Close Image";
             this.mnuFileClose.Click += new System.EventHandler(this.mnuFileClose_Click);
             // 
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(180, 22);
+            this.mnuFileExit.Size = new System.Drawing.Size(139, 22);
             this.mnuFileExit.Text = "Exit ";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 
@@ -172,13 +179,6 @@ namespace SuperCoders_SharpView
             this.timerCheckDarkmode.Enabled = true;
             this.timerCheckDarkmode.Tick += new System.EventHandler(this.timerCheckDarkmode_Tick);
             // 
-            // openFolderToolStripMenuItem
-            // 
-            this.openFolderToolStripMenuItem.Name = "openFolderToolStripMenuItem";
-            this.openFolderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openFolderToolStripMenuItem.Text = "Open Folder";
-            this.openFolderToolStripMenuItem.Click += new System.EventHandler(this.openFolderToolStripMenuItem_Click);
-            // 
             // FormSharpView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,7 +193,7 @@ namespace SuperCoders_SharpView
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 597);
             this.Name = "FormSharpView";
-            this.Text = "Super Coder Sharp View";
+            this.Text = "SuperCoders Sharp Viewer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSharpView_FormClosing);
             this.Load += new System.EventHandler(this.FormSharpView_Load);
             this.menuStrip2.ResumeLayout(false);
