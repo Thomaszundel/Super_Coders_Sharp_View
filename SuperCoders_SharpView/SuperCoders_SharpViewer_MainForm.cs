@@ -45,13 +45,14 @@ namespace SuperCoders_SharpView
         }
         private void FileConfig(string FileName)
         {
-            mnuFileClose.Enabled = true;
-            btnNext.Enabled = true;
-            btnLast.Enabled = true;
-            PicBoxMain.Image = Image.FromFile(FileName);
-            lblName.Text = Path.GetFileNameWithoutExtension(FileName);
-            filePath = Path.GetDirectoryName(FileName);
-            filePathFull = Path.GetFullPath(FileName);
+                mnuFileClose.Enabled = true;
+                btnNext.Enabled = true;
+                btnLast.Enabled = true;
+                PicBoxMain.Image = Image.FromFile(FileName);
+                lblName.Text = Path.GetFileNameWithoutExtension(FileName);
+                filePath = Path.GetDirectoryName(FileName);
+                filePathFull = Path.GetFullPath(FileName);
+           
         }
         public void SetNumLbl()
         {
@@ -159,11 +160,12 @@ namespace SuperCoders_SharpView
             lblImgNumber.Text = "";
             if (lastPhoto != null)
             {
-                FileConfig(lastPhoto);
-                files = Directory.GetFiles(filePath);
-                fileName = Path.GetFileNameWithoutExtension(lastPhoto);
-                GetPicNumber();
-                SetNumLbl();
+                    FileConfig(lastPhoto);
+                    files = Directory.GetFiles(filePath);
+                    fileName = Path.GetFileNameWithoutExtension(lastPhoto);
+                    GetPicNumber();
+                    SetNumLbl();
+               
             }           
                     
         }
@@ -248,6 +250,33 @@ namespace SuperCoders_SharpView
                 SetNumLbl();
                 fbd.Dispose();
             }
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.L)
+            {
+                btnLast.PerformClick();
+                return true;
+            }
+            if (keyData == Keys.N)
+            {
+                btnNext.PerformClick();
+                return true;
+            }
+
+            //capture left arrow key
+            if (keyData == Keys.Left)
+            {
+                btnLast.PerformClick();
+                return true;
+            }
+            //capture right arrow key
+            if (keyData == Keys.Right)
+            {
+                btnNext.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
