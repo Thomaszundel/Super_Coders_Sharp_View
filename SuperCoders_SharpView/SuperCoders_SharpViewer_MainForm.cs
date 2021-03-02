@@ -80,7 +80,7 @@ namespace SuperCoders_SharpView
         }
         private void timerCheckDarkmode_Tick(object sender, EventArgs e)
         {
-
+            darkMode = Options.GetDark();
             if (darkMode == true)
             {
 
