@@ -48,24 +48,27 @@ namespace SuperCoders_SharpView
             if (checkBoxDarkMode.Checked)
             {
                 darkEnable = true;
-                this.BackColor = ColorTranslator.FromHtml("#626262");
-                //    checkBoxDarkMode.BackColor = ColorTranslator.FromHtml("#626262");
-                //    checkBoxEnableSplashScreen.ForeColor = Color.White;
-                //    checkBoxRememberLast.ForeColor = Color.White;
-                //    checkBoxDarkMode.ForeColor = Color.White;
-                //    labelCredits.ForeColor = Color.White;
+                this.BackColor = ColorTranslator.FromHtml("#404040");
+                checkBoxDarkMode.BackColor = ColorTranslator.FromHtml("#404040");
+                checkboxDisableSplashScreen.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
+                checkBoxRememberLast.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
+                checkBoxDarkMode.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
+                labelCredits.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
+                btnOK.BackColor = ColorTranslator.FromHtml("#737373");
+                btnOK.ForeColor = ColorTranslator.FromHtml("#ffffff");
 
             }
             else
             {
                 darkEnable = false;
-                this.BackColor = Color.White;
-                //    checkBoxDarkMode.BackColor = Color.White;
-                //    checkBoxEnableSplashScreen.ForeColor = Color.Black;
-                //    checkBoxRememberLast.ForeColor = Color.Black;
-                //    checkBoxDarkMode.ForeColor = Color.Black;
-                //    labelCredits.ForeColor = Color.Black;
-
+                this.BackColor = ColorTranslator.FromHtml("#f2f2f2");
+                checkBoxDarkMode.BackColor = ColorTranslator.FromHtml("#f2f2f2");
+                checkboxDisableSplashScreen.ForeColor = Color.Black;
+                checkBoxRememberLast.ForeColor = Color.Black;
+                checkBoxDarkMode.ForeColor = Color.Black;
+                labelCredits.ForeColor = Color.Black;
+                btnOK.BackColor = Color.White;
+                btnOK.ForeColor = Color.Black;
             }
 
         }
@@ -111,7 +114,6 @@ namespace SuperCoders_SharpView
 
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
             if (e.CloseReason == CloseReason.ApplicationExitCall) return;
-            
             e.Cancel = true;
             this.Hide();
         }

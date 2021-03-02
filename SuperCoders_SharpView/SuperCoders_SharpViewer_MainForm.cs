@@ -80,30 +80,47 @@ namespace SuperCoders_SharpView
         }
         private void timerCheckDarkmode_Tick(object sender, EventArgs e)
         {
-            //OptionsForm Options = new OptionsForm(ref remember);
+            darkMode = Options.GetDark();
+            if (darkMode == true)
+            {
 
-            //OptionsForm Optionsd = new OptionsForm(ref darkEnable);
-            //if (darkEnable = Optionsd.GetDark() = true)
-            //{
+                this.BackColor = ColorTranslator.FromHtml("#404040");
 
-            //    this.BackColor = ColorTranslator.FromHtml("#626262");
-                //    menuStrip2.BackColor = ColorTranslator.FromHtml("#626262");
-                //    mnuOptions.BackColor = ColorTranslator.FromHtml("#626262");
-                //    mnuOptions.ForeColor = Color.White;
+                menuStrip2.BackColor = ColorTranslator.FromHtml("#333333");
+                mnuOptions.BackColor = ColorTranslator.FromHtml("#333333");
+                mnuOptions.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
+                mnuFile.BackColor = ColorTranslator.FromHtml("#333333");
+                mnuFile.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
+                mnuFileOpen.BackColor = ColorTranslator.FromHtml("#737373");
+                mnuFileOpen.ForeColor = ColorTranslator.FromHtml("#ffffff");
+                openFolderToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#737373");
+                openFolderToolStripMenuItem.ForeColor = ColorTranslator.FromHtml("#ffffff");
+                mnuFileClose.BackColor = ColorTranslator.FromHtml("#737373");
+                mnuFileClose.ForeColor = ColorTranslator.FromHtml("#ffffff");
+                mnuFileExit.BackColor = ColorTranslator.FromHtml("#737373");
+                mnuFileExit.ForeColor = ColorTranslator.FromHtml("#ffffff");
+
+                lblImgNumber.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
+                btnLast.BackColor = ColorTranslator.FromHtml("#737373");
+                btnLast.ForeColor = ColorTranslator.FromHtml("#f2f2f2");
+                btnNext.BackColor = ColorTranslator.FromHtml("#737373");
+                btnNext.ForeColor = ColorTranslator.FromHtml("#f2f2f2");
+                lblName.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
+
+
+            }
+            else
+            {
+                this.BackColor = ColorTranslator.FromHtml("#f2f2f2");
+                menuStrip2.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                mnuOptions.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                mnuOptions.ForeColor = Color.Black;
+                mnuFile.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                mnuFile.ForeColor = Color.Black;
 
 
 
-            //}
-            //else
-            //{
-            //    this.BackColor = Color.White;
-                //    menuStrip2.BackColor = Color.White;
-                //    mnuOptions.BackColor = Color.White;
-                //    mnuOptions.ForeColor = Color.Black;
-
-
-
-            //}
+            }
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
