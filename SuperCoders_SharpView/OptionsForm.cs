@@ -110,6 +110,7 @@ namespace SuperCoders_SharpView
             base.OnFormClosing(e);
 
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
+            if (e.CloseReason == CloseReason.ApplicationExitCall) return;
             
             e.Cancel = true;
             this.Hide();
