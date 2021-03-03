@@ -106,8 +106,6 @@ namespace SuperCoders_SharpView
                 btnNext.BackColor = ColorTranslator.FromHtml("#737373");
                 btnNext.ForeColor = ColorTranslator.FromHtml("#f2f2f2");
                 lblName.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
-
-
             }
             else
             {
@@ -117,9 +115,21 @@ namespace SuperCoders_SharpView
                 mnuOptions.ForeColor = Color.Black;
                 mnuFile.BackColor = ColorTranslator.FromHtml("#e6e6e6");
                 mnuFile.ForeColor = Color.Black;
+                mnuFileOpen.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                mnuFileOpen.ForeColor = Color.Black;
+                openFolderToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                openFolderToolStripMenuItem.ForeColor = Color.Black;
+                mnuFileClose.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                mnuFileClose.ForeColor = Color.Black;
+                mnuFileExit.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                mnuFileExit.ForeColor = Color.Black;
 
-
-
+                lblImgNumber.ForeColor = Color.Black;
+                btnLast.BackColor = Color.White;
+                btnLast.ForeColor = Color.Black;
+                btnNext.BackColor = Color.White;
+                btnNext.ForeColor = Color.Black;
+                lblName.ForeColor = Color.Black;
             }
         }
         private void btnNext_Click(object sender, EventArgs e)
