@@ -25,7 +25,6 @@ namespace SuperCoders_SharpView
             darkEnable = mainDarkEnable;
             splashDisable = mainSplashDisable;
         }
-
         private void checkboxDisableSplashScreen_CheckedChanged(object sender, EventArgs e)
         {
             if (checkboxDisableSplashScreen.Checked == true)
@@ -33,7 +32,6 @@ namespace SuperCoders_SharpView
             else
                 splashDisable = false;
         }
-
         private void checkBoxRememberLast_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxRememberLast.Checked == true)
@@ -41,10 +39,8 @@ namespace SuperCoders_SharpView
             else
                 remember = false;
         }
-
         public void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
         {
-
             if (checkBoxDarkMode.Checked)
             {
                 darkEnable = true;
@@ -56,7 +52,6 @@ namespace SuperCoders_SharpView
                 labelCredits.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
                 btnOK.BackColor = ColorTranslator.FromHtml("#737373");
                 btnOK.ForeColor = ColorTranslator.FromHtml("#ffffff");
-
             }
             else
             {
@@ -70,54 +65,42 @@ namespace SuperCoders_SharpView
                 btnOK.BackColor = Color.White;
                 btnOK.ForeColor = Color.Black;
             }
-
         }
-
-
         private void OptionsForm_Load(object sender, EventArgs e)
         {
             if (splashDisable == true)
                 checkboxDisableSplashScreen.Checked = true;
             else
                 checkboxDisableSplashScreen.Checked = false;
-
             if (remember == true)
                 checkBoxRememberLast.Checked = true;
             else
                 checkBoxRememberLast.Checked = false;
-
-
             if (darkEnable == true)
                 checkBoxDarkMode.Checked = true;
             else
                 checkBoxDarkMode.Checked = false;
         }
-
         public bool GetRemember()
         {
             return remember;
         }
-
         public bool GetDark()
         {
             return darkEnable;
         }
-
         public bool GetSplash()
         {
             return splashDisable;
         }
-
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
-
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
             if (e.CloseReason == CloseReason.ApplicationExitCall) return;
             e.Cancel = true;
             this.Hide();
         }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             this.Close();

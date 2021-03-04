@@ -32,7 +32,6 @@ namespace SuperCoders_SharpView
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "jpg (*.jpg)|*.jpg|bmp (*.bmp)|*.bmp|png (*.png)|*.png";
             ofd.InitialDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-
             if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
             {
                 FileConfig(ofd.FileName);
@@ -52,7 +51,6 @@ namespace SuperCoders_SharpView
                 lblName.Text = Path.GetFileNameWithoutExtension(FileName);
                 filePath = Path.GetDirectoryName(FileName);
                 filePathFull = Path.GetFullPath(FileName);
-           
         }
         public void SetNumLbl()
         {
@@ -83,9 +81,7 @@ namespace SuperCoders_SharpView
             darkMode = Options.GetDark();
             if (darkMode == true)
             {
-
                 this.BackColor = ColorTranslator.FromHtml("#404040");
-
                 menuStrip2.BackColor = ColorTranslator.FromHtml("#333333");
                 mnuOptions.BackColor = ColorTranslator.FromHtml("#333333");
                 mnuOptions.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
@@ -99,7 +95,6 @@ namespace SuperCoders_SharpView
                 mnuFileClose.ForeColor = ColorTranslator.FromHtml("#ffffff");
                 mnuFileExit.BackColor = ColorTranslator.FromHtml("#737373");
                 mnuFileExit.ForeColor = ColorTranslator.FromHtml("#ffffff");
-
                 lblImgNumber.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
                 btnLast.BackColor = ColorTranslator.FromHtml("#737373");
                 btnLast.ForeColor = ColorTranslator.FromHtml("#f2f2f2");
@@ -123,7 +118,6 @@ namespace SuperCoders_SharpView
                 mnuFileClose.ForeColor = Color.Black;
                 mnuFileExit.BackColor = ColorTranslator.FromHtml("#e6e6e6");
                 mnuFileExit.ForeColor = Color.Black;
-
                 lblImgNumber.ForeColor = Color.Black;
                 btnLast.BackColor = Color.White;
                 btnLast.ForeColor = Color.Black;
@@ -169,7 +163,6 @@ namespace SuperCoders_SharpView
                 remember = true;
             else
                 remember = false;
-
             if (darkResult == "True")
                 darkMode = true;
             else
@@ -179,7 +172,6 @@ namespace SuperCoders_SharpView
                 splashScreen = true;
             else
                 splashScreen = false;
-
             Options = new OptionsForm(ref remember, ref darkMode, ref splashScreen);
             Options.Hide();
             string lastPhoto = LoadLastPhoto();
@@ -192,21 +184,17 @@ namespace SuperCoders_SharpView
                     fileName = Path.GetFileNameWithoutExtension(lastPhoto);
                     GetPicNumber();
                     SetNumLbl();
-               
             }           
-                    
         }
 
         private void FormSharpView_FormClosing(object sender, FormClosingEventArgs e)
         {
             Save(filePathFull);
         }
-
         private void btnLast_Click(object sender, EventArgs e)
         {
             //**get files from directory**
             string[] files = Directory.GetFiles(filePath);
-
             _pictureIndex--;
             if (_pictureIndex < 0)
             {
