@@ -82,15 +82,15 @@ namespace SuperCoders_SharpView
             if (darkMode == true)
             {
                 this.BackColor = ColorTranslator.FromHtml("#404040");
-                menuStrip2.BackColor = ColorTranslator.FromHtml("#333333");
+                mnuStrip.BackColor = ColorTranslator.FromHtml("#333333");
                 mnuOptions.BackColor = ColorTranslator.FromHtml("#333333");
                 mnuOptions.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
                 mnuFile.BackColor = ColorTranslator.FromHtml("#333333");
                 mnuFile.ForeColor = ColorTranslator.FromHtml("#d9d9d9");
                 mnuFileOpen.BackColor = ColorTranslator.FromHtml("#737373");
                 mnuFileOpen.ForeColor = ColorTranslator.FromHtml("#ffffff");
-                openFolderToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#737373");
-                openFolderToolStripMenuItem.ForeColor = ColorTranslator.FromHtml("#ffffff");
+                mnuFileOpenFolder.BackColor = ColorTranslator.FromHtml("#737373");
+                mnuFileOpenFolder.ForeColor = ColorTranslator.FromHtml("#ffffff");
                 mnuFileClose.BackColor = ColorTranslator.FromHtml("#737373");
                 mnuFileClose.ForeColor = ColorTranslator.FromHtml("#ffffff");
                 mnuFileExit.BackColor = ColorTranslator.FromHtml("#737373");
@@ -105,15 +105,15 @@ namespace SuperCoders_SharpView
             else
             {
                 this.BackColor = ColorTranslator.FromHtml("#f2f2f2");
-                menuStrip2.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                mnuStrip.BackColor = ColorTranslator.FromHtml("#e6e6e6");
                 mnuOptions.BackColor = ColorTranslator.FromHtml("#e6e6e6");
                 mnuOptions.ForeColor = Color.Black;
                 mnuFile.BackColor = ColorTranslator.FromHtml("#e6e6e6");
                 mnuFile.ForeColor = Color.Black;
                 mnuFileOpen.BackColor = ColorTranslator.FromHtml("#e6e6e6");
                 mnuFileOpen.ForeColor = Color.Black;
-                openFolderToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#e6e6e6");
-                openFolderToolStripMenuItem.ForeColor = Color.Black;
+                mnuFileOpenFolder.BackColor = ColorTranslator.FromHtml("#e6e6e6");
+                mnuFileOpenFolder.ForeColor = Color.Black;
                 mnuFileClose.BackColor = ColorTranslator.FromHtml("#e6e6e6");
                 mnuFileClose.ForeColor = Color.Black;
                 mnuFileExit.BackColor = ColorTranslator.FromHtml("#e6e6e6");
