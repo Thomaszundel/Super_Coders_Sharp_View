@@ -33,15 +33,31 @@ namespace SuperCoders_SharpView
             //**enable buttons load pic box set lable name**// 
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "jpg (*.jpg)|*.jpg|bmp (*.bmp)|*.bmp|png (*.png)|*.png";
-            ofd.InitialDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-            if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
+            if (PicBoxMain.Image != null)
             {
-                FileConfig(ofd.FileName);
-                files = Directory.GetFiles(filePath);
-                fileName = Path.GetFileNameWithoutExtension(ofd.FileName);
-                GetPicNumber();
-                SetNumLbl();
-                ofd.Dispose();
+                ofd.InitialDirectory = Path.GetFullPath(files[_pictureIndex]);
+                if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
+                {
+                    FileConfig(ofd.FileName);
+                    files = Directory.GetFiles(filePath);
+                    fileName = Path.GetFileNameWithoutExtension(ofd.FileName);
+                    GetPicNumber();
+                    SetNumLbl();
+                    ofd.Dispose();
+                }
+            }
+            else
+            {
+                ofd.InitialDirectory = Path.GetDirectoryName(Application.ExecutablePath);
+                if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
+                {
+                    FileConfig(ofd.FileName);
+                    files = Directory.GetFiles(filePath);
+                    fileName = Path.GetFileNameWithoutExtension(ofd.FileName);
+                    GetPicNumber();
+                    SetNumLbl();
+                    ofd.Dispose();
+                }
             }
             
         }
@@ -270,6 +286,7 @@ namespace SuperCoders_SharpView
                 btnLast.Enabled = true;
                 lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
                 filePath = Path.GetDirectoryName(files[_pictureIndex]);
+                filePathFull = Path.GetFullPath(files[_pictureIndex]);
                 SetNumLbl();
                 fbd.Dispose();
             }
