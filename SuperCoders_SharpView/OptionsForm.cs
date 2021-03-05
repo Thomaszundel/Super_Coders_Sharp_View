@@ -20,6 +20,7 @@ namespace SuperCoders_SharpView
         bool splashDisable;
         public OptionsForm(ref bool mainRemember, ref bool mainDarkEnable, ref bool mainSplashDisable)
         {
+            //Sets local variables equal to the saved variables
             InitializeComponent();
             remember = mainRemember;
             darkEnable = mainDarkEnable;
@@ -27,6 +28,7 @@ namespace SuperCoders_SharpView
         }
         private void checkboxDisableSplashScreen_CheckedChanged(object sender, EventArgs e)
         {
+            // Changes the value of splashDisable when its checkbox is clicked
             if (checkboxDisableSplashScreen.Checked == true)
                 splashDisable = true;
             else
@@ -34,6 +36,7 @@ namespace SuperCoders_SharpView
         }
         private void checkBoxRememberLast_CheckedChanged(object sender, EventArgs e)
         {
+            // Changes the value of remember when its checkbox is clicked
             if (checkBoxRememberLast.Checked == true)
                 remember = true;
             else
@@ -41,6 +44,8 @@ namespace SuperCoders_SharpView
         }
         public void checkBoxDarkMode_CheckedChanged(object sender, EventArgs e)
         {
+            // Changes the value of darkEnable when its checkbox is clicked and
+            // updates Options form accordingly
             if (checkBoxDarkMode.Checked)
             {
                 darkEnable = true;
@@ -68,6 +73,8 @@ namespace SuperCoders_SharpView
         }
         private void OptionsForm_Load(object sender, EventArgs e)
         {
+            // Determines whether the checkboxes are checked or not based off
+            // of saved variables
             if (splashDisable == true)
                 checkboxDisableSplashScreen.Checked = true;
             else
@@ -83,6 +90,7 @@ namespace SuperCoders_SharpView
         }
         public bool GetRemember()
         {
+            // sends local variables back to the main form
             return remember;
         }
         public bool GetDark()
@@ -95,6 +103,7 @@ namespace SuperCoders_SharpView
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
+            // Hides the option form upon closing instead of closing it
             base.OnFormClosing(e);
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
             if (e.CloseReason == CloseReason.ApplicationExitCall) return;
@@ -103,6 +112,7 @@ namespace SuperCoders_SharpView
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
+            // 'closes' the form
             this.Close();
         }
     }

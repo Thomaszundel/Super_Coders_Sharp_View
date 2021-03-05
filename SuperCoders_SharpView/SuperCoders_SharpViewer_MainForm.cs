@@ -29,6 +29,8 @@ namespace SuperCoders_SharpView
         }
         private void mnuFileOpen_Click(object sender, EventArgs e)
         {
+            //***open file dialog and set start up path***//
+            //**enable buttons load pic box set lable name**// 
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "jpg (*.jpg)|*.jpg|bmp (*.bmp)|*.bmp|png (*.png)|*.png";
             ofd.InitialDirectory = Path.GetDirectoryName(Application.ExecutablePath);
@@ -41,6 +43,7 @@ namespace SuperCoders_SharpView
                 SetNumLbl();
                 ofd.Dispose();
             }
+            
         }
         private void FileConfig(string FileName)
         {
@@ -54,11 +57,13 @@ namespace SuperCoders_SharpView
         }
         public void SetNumLbl()
         {
+            //Sets number label on the form 
             int notBased = _pictureIndex + 1;
             lblImgNumber.Text = notBased + " / " + files.Length;
         }
         public void GetPicNumber()
         {
+            //runs through a loop to figure out what picture is being opened in the array
             for (int i = 0; i < files.Length; i++)
             {
                 if (files[i].Contains(fileName))
@@ -78,6 +83,7 @@ namespace SuperCoders_SharpView
         }
         private void timerCheckDarkmode_Tick(object sender, EventArgs e)
         {
+            //Changes colors on the form if the dark mode option is selected 
             darkMode = Options.GetDark();
             if (darkMode == true)
             {
@@ -146,6 +152,7 @@ namespace SuperCoders_SharpView
 
         private void mnuFileClose_Click(object sender, EventArgs e)
         {
+            //**close file, disable buttons reset label
             mnuFileClose.Enabled = false;
             btnNext.Enabled = false;
             btnLast.Enabled = false;
@@ -248,6 +255,7 @@ namespace SuperCoders_SharpView
         private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //***open folder dialog and set start up path***//
+            //**enable buttons load pic box set lable name**//
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             fbd.Description = "Select a folder";
             fbd.SelectedPath = Application.StartupPath;
@@ -268,6 +276,7 @@ namespace SuperCoders_SharpView
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            //**override comand keys, assign button click to keys
             if (keyData == Keys.L)
             {
                 btnLast.PerformClick();
