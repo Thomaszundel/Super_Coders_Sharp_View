@@ -174,6 +174,7 @@ namespace SuperCoders_SharpView
             btnLast.Enabled = false;
             PicBoxMain.Image.Dispose();
             PicBoxMain.Image = null;
+            filePathFull = null;
             lblName.Text = "";
             lblImgNumber.Text = "";
         }
@@ -276,19 +277,27 @@ namespace SuperCoders_SharpView
             fbd.Description = "Select a folder";
             fbd.SelectedPath = Application.StartupPath;
             fbd.ShowNewFolderButton = false;
+
             if (DialogResult.OK == fbd.ShowDialog())
             {
-                _pictureIndex = 0;
-                mnuFileClose.Enabled = true;
-                files = Directory.GetFiles(fbd.SelectedPath, "*.*");
-                PicBoxMain.Image = Image.FromFile(files[_pictureIndex]);
-                btnNext.Enabled = true;
-                btnLast.Enabled = true;
-                lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
-                filePath = Path.GetDirectoryName(files[_pictureIndex]);
-                filePathFull = Path.GetFullPath(files[_pictureIndex]);
-                SetNumLbl();
-                fbd.Dispose();
+                try
+                {
+                    _pictureIndex = 0;
+                    mnuFileClose.Enabled = true;
+                    files = Directory.GetFiles(fbd.SelectedPath, "*.*");
+                    PicBoxMain.Image = Image.FromFile(files[_pictureIndex]);
+                    btnNext.Enabled = true;
+                    btnLast.Enabled = true;
+                    lblName.Text = Path.GetFileNameWithoutExtension(files[_pictureIndex]);
+                    filePath = Path.GetDirectoryName(files[_pictureIndex]);
+                    filePathFull = Path.GetFullPath(files[_pictureIndex]);
+                    SetNumLbl();
+                    fbd.Dispose();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("An error occurred while attempting to load the file.");
+                }
             }
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
